@@ -15,14 +15,17 @@ I am very interested in building computational models to study how human cogniti
 
 Feel free to reach out if you have any questions regarding my research. I am currently located at
 
-Ames 150, Department of Psychological & Brain Sciences, 
-3400 N. Charles Street, Baltimore, MD - 21218, USA.
+Ames 150, 
+Department of Psychological & Brain Sciences, 
+3400 N. Charles Street, 
+Baltimore, 
+MD - 21218, USA.
 
 or email me at `supadhy6 at jhu dot edu`
 
 
 ### Education:
-- **[Johns Hopkins University](https://www.pbs.jhu.edu)** (2016 - 2021 `expected`)   
+- **[Johns Hopkins University](https://www.pbs.jhu.edu)** (2016 - `expected May` 2021)   
   Ph.D in Cognitive Psychology
 - **[Johns Hopkins University](https://www.pbs.jhu.edu)** (2016 - 2018)   
   M.A. Cognitive Psychology
