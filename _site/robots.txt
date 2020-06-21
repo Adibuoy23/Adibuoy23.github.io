@@ -1,1 +1,1 @@
-Sitemap: /others/sitemap.xml
+Sitemap: /sitemap.xml
