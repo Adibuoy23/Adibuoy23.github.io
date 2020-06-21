@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Resume - Aditya Upadhyayula</title>
+<!-- begin _includes/seo.html --><title>CV - Aditya Upadhyayula</title>
 <meta name="description" content="Powered by Jekyll and Github">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Aditya Upadhyayula">
-<meta property="og:title" content="Resume">
-<meta property="og:url" content="/Resume/">
+<meta property="og:title" content="CV">
+<meta property="og:url" content="/CV/">
 
 
   <meta property="og:description" content="Powered by Jekyll and Github">
@@ -40,7 +40,7 @@
   
 
 
-<link rel="canonical" href="/Resume/">
+<link rel="canonical" href="/CV/">
 
 
 
@@ -131,7 +131,7 @@
             </li><li class="masthead__menu-item">
               <a href="/Blogs/">Blogs</a>
             </li><li class="masthead__menu-item">
-              <a href="/Resume/">Resume</a>
+              <a href="/CV/">CV</a>
             </li><li class="masthead__menu-item">
               <a href="/gallery/">Gallery</a>
             </li><li class="masthead__menu-item">
@@ -171,7 +171,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Resume</li>
+        <li class="current">CV</li>
       
     
   </ol>
@@ -309,7 +309,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Resume">
+    <meta itemprop="headline" content="CV">
     
     
     
@@ -317,7 +317,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Resume
+          <h1 id="page-title" class="page__title" itemprop="headline">CV
 </h1>
           
         </header>
@@ -325,7 +325,9 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Here is my resume. Please <a href="https://adibuoy23.github.io/others/Resume.pdf">Click here</a></p>
+        <p><br /><br /></p>
+
+<p><a href="https://adibuoy23.github.io/others/Resume.pdf">Click here for my resume</a></p>
 
         
       </section>
@@ -385,50 +387,6 @@
 
 
 
-
-
-    
-  <script>
-    (function ($) {
-    $('#new_comment').submit(function () {
-      var form = this;
-
-      $(form).addClass('disabled');
-      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
-
-      $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        data: $(this).serialize(),
-        contentType: 'application/x-www-form-urlencoded',
-        success: function (data) {
-          $('#comment-form-submit').html('Submitted');
-          $('.page__comments-form .js-notice').removeClass('notice--danger');
-          $('.page__comments-form .js-notice').addClass('notice--success');
-          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
-        },
-        error: function (err) {
-          console.log(err);
-          $('#comment-form-submit').html('Submit Comment');
-          $('.page__comments-form .js-notice').removeClass('notice--success');
-          $('.page__comments-form .js-notice').addClass('notice--danger');
-          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
-          $(form).removeClass('disabled');
-        }
-      });
-
-      return false;
-    });
-
-    function showAlert(message) {
-      $('.page__comments-form .js-notice').removeClass('hidden');
-      $('.page__comments-form .js-notice-text').html(message);
-    }
-  })(jQuery);
-  </script>
-
-
-  
 
 
 

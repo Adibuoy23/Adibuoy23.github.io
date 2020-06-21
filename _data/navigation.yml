@@ -11,8 +11,8 @@ main:
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
-  - title: "Resume"
-    url: /Resume/
+  - title: "CV"
+    url: /CV/
   - title: "Gallery"
     url: /gallery/
   - title: "External Links"
