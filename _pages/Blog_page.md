@@ -6,7 +6,7 @@ author_profile: true
 comments: true
 ---
 
-Most of my blogs are technical blogs written mainly for my own reference. I'd be happy if any of you find them useful too.
+Most of my blogs are going to be technical blogs written mainly for my own reference. However, I will try to post videos about my research. I'd be happy if any of you find them useful too.
 
 
 
@@ -27,6 +27,6 @@ Most of my blogs are technical blogs written mainly for my own reference. I'd be
 </ul>
 
 ## Notebooks:
-- [**Python: assignment, function argument passing, views, and copies**](https://github.com/zengliX/Notebooks/blob/master/python_variable.ipynb)
+- Jupyter notebook lab tutorials on Deep Learning using Pytorch (Coming soon...)
 
 
