@@ -1,6 +1,8 @@
 ---
-layout: post
-title: Hallo world?
+title:  ".Hallo world?"
+date:   2020-06-19
+layout: single
+author_profile: true
 excerpt_separator:  <!--more-->
 ---
 
