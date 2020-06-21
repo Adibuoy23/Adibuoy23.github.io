@@ -7,5 +7,4 @@ author_profile: true
 ---
 
 
-
-<iframe src="https://docs.google.com/document/d/1-nxBMcHa48DUrHyviab7iD-6zqGCoVxDLWhtjeMIrbo/&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+<a href="adibuoy23.github.io/others/Resume.pdf" target="_blank">Click here.</a>
