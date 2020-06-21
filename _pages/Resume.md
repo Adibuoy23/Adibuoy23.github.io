@@ -6,5 +6,4 @@ comments: true
 author_profile: true
 ---
 
-
-[Click here](https://adibuoy23.github.io/others/Resume.pdf)
+Here is my resume. Please [Click here](https://adibuoy23.github.io/others/Resume.pdf)
