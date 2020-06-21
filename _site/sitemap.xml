@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/poster@VSS_2020/</loc>
+<lastmod>2020-06-20T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/talk@VSS_2020/</loc>
+<lastmod>2020-06-20T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Blogs/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/resume/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/About/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/gallery/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/links/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/Aditya_Upadhyayula_Resume_2020_06_21.pdf</loc>
+<lastmod>2020-06-20T23:20:35-04:00</lastmod>
+</url>
+</urlset>
