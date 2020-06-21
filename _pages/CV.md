@@ -7,4 +7,4 @@ author_profile: true
 
 <br><br>
 
-[Click here for my resume](https://adibuoy23.github.io/others/Resume.pdf)
+[Click here for my CV](https://adibuoy23.github.io/others/Resume.pdf)
