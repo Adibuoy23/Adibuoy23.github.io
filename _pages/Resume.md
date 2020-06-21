@@ -1,10 +1,10 @@
 ---
 layout: single
 title: "Resume"
-permalink: /resume/
+permalink: /Resume/
 comments: true
 author_profile: true
 ---
 
 
-<a href="adibuoy23.github.io/others/Resume.pdf" target="_blank">Click here.</a>
+<a href="others/Resume.pdf" target="_blank">Click here.</a>
