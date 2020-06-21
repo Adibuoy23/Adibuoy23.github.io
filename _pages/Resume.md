@@ -7,4 +7,4 @@ author_profile: true
 ---
 
 
-<a href="others/Resume.pdf" target="_blank">Click here.</a>
+<a href="https://adibuoy23.github.io/others/Resume.pdf" target="_blank">Click here.</a>
