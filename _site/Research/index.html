@@ -325,103 +325,25 @@
 
       <section class="page__content" itemprop="text">
         
-        
-<figure class="third ">
-  
-    
-      <a href="/pics/gallery/HS_tower.jpg" title="Harkness Tower">
-          <img src="/pics/gallery/HS_tower.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/yale_lib.jpg" title="Yale Beinecke Rare Book Library">
-          <img src="/pics/gallery/yale_lib.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/eastrock.jpg" title="Mountain top of East Rock">
-          <img src="/pics/gallery/eastrock.jpg" alt="" />
-      </a>
-    
-  
-  
-    <figcaption><strong>Yale University</strong>
-</figcaption>
-  
-</figure>
+        <h1 id="how-do-we-process-time">How do we process time?</h1>
+<blockquote>
+  <p>When we think about time we conceptualize it in terms of discrete units, or moments in time. But what are these moments? How long are they? What do they contain? How are these moments accumulated to give rise to a sense of duration? These are the questions I am currently exploring in my dissertation</p>
+  <blockquote>
+    <h2 id="what-are-the-constituents-of-a-moment-of-our-visual-experience">What are the constituents of a moment of our visual experience?</h2>
+    <p>Answer: TL;DR: A moment in our visual experience does not reflect a moment in the real world. Infact, it stitches together moments across space that happened at different time points.
+Here is a presentation on the same</p>
 
-<figure class="third ">
-  
-    
-      <a href="/pics/gallery/bryce2.jpg" title="Bryce Canyon">
-          <img src="/pics/gallery/bryce2.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/bryce.jpg" title="Bryce Canyon">
-          <img src="/pics/gallery/bryce.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/antelop.jpg" title="Antelope Canyon">
-          <img src="/pics/gallery/antelop.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/sd.jpg" title="SD sea world: killer whale">
-          <img src="/pics/gallery/sd.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/yosemite.jpg" title="Yosemite National Park">
-          <img src="/pics/gallery/yosemite.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/panda.jpg" title="The superstar in SD Zoo">
-          <img src="/pics/gallery/panda.jpg" alt="" />
-      </a>
-    
-  
-  
-    <figcaption><strong>Trips</strong>
-</figcaption>
-  
-</figure>
+    <iframe width="460" height="315" src="https://www.youtube.com/embed/JQlGu8vNaOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </blockquote>
 
-<figure class="third ">
-  
-    
-      <a href="/pics/gallery/cat_thief.jpg" title="The thief cat">
-          <img src="/pics/gallery/cat_thief.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/boston_squirrel.jpg" title="Boston Common squirrel">
-          <img src="/pics/gallery/boston_squirrel.jpg" alt="" />
-      </a>
-    
-  
-    
-      <a href="/pics/gallery/NH_street.jpg" title="Street art on Chapel">
-          <img src="/pics/gallery/NH_street.jpg" alt="" />
-      </a>
-    
-  
-  
-    <figcaption><strong>Miscellaneous</strong>
-</figcaption>
-  
-</figure>
+  <blockquote>
+    <h2 id="how-are-moments-in-time-accumulated-to-give-rise-to-a-sense-of-duration">How are moments in time accumulated to give rise to a sense of duration?</h2>
+    <p>Existing research has shown that time expands when we experience novel situations. This phenomenon is called <code class="language-plaintext highlighter-rouge">Subjective Expansion of Time</code>. Does time really expand during such events?
+Answer: TL;DR: Our perception of time remains the same during novel and boring events. Instead the way we remember those events is distorted. Check out this presentation for more information:</p>
 
+    <iframe width="460" height="315" src="https://www.youtube.com/embed/w82668xFLfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </blockquote>
+</blockquote>
 
         
       </section>
@@ -485,43 +407,18 @@
 
     
   <script>
-    (function ($) {
-    $('#new_comment').submit(function () {
-      var form = this;
-
-      $(form).addClass('disabled');
-      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
-
-      $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        data: $(this).serialize(),
-        contentType: 'application/x-www-form-urlencoded',
-        success: function (data) {
-          $('#comment-form-submit').html('Submitted');
-          $('.page__comments-form .js-notice').removeClass('notice--danger');
-          $('.page__comments-form .js-notice').addClass('notice--success');
-          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
-        },
-        error: function (err) {
-          console.log(err);
-          $('#comment-form-submit').html('Submit Comment');
-          $('.page__comments-form .js-notice').removeClass('notice--success');
-          $('.page__comments-form .js-notice').addClass('notice--danger');
-          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
-          $(form).removeClass('disabled');
-        }
-      });
-
-      return false;
-    });
-
-    function showAlert(message) {
-      $('.page__comments-form .js-notice').removeClass('hidden');
-      $('.page__comments-form .js-notice-text').html(message);
-    }
-  })(jQuery);
+    var disqus_config = function () {
+      this.page.url = "/Research/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = ""; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://Adibuoy23.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
   </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
   

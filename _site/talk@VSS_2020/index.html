@@ -524,43 +524,18 @@ Our experience of passage of time varies with the situation that we are in. For 
 
     
   <script>
-    (function ($) {
-    $('#new_comment').submit(function () {
-      var form = this;
-
-      $(form).addClass('disabled');
-      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
-
-      $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        data: $(this).serialize(),
-        contentType: 'application/x-www-form-urlencoded',
-        success: function (data) {
-          $('#comment-form-submit').html('Submitted');
-          $('.page__comments-form .js-notice').removeClass('notice--danger');
-          $('.page__comments-form .js-notice').addClass('notice--success');
-          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
-        },
-        error: function (err) {
-          console.log(err);
-          $('#comment-form-submit').html('Submit Comment');
-          $('.page__comments-form .js-notice').removeClass('notice--success');
-          $('.page__comments-form .js-notice').addClass('notice--danger');
-          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
-          $(form).removeClass('disabled');
-        }
-      });
-
-      return false;
-    });
-
-    function showAlert(message) {
-      $('.page__comments-form .js-notice').removeClass('hidden');
-      $('.page__comments-form .js-notice-text').html(message);
-    }
-  })(jQuery);
+    var disqus_config = function () {
+      this.page.url = "/talk@VSS_2020/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/talk@VSS_2020"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://Adibuoy23.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
   </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
   
