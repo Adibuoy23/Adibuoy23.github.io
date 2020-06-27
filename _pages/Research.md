@@ -29,6 +29,7 @@ Check out this presentation for more information:
 
 <iframe width="360" height="215" src="https://www.youtube.com/embed/w82668xFLfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
+_____________________________________________________________________________
 
 # Hierarchical Processing in Visual Narratives
 `In collaboration with: Neil Cohn, PhD`
@@ -43,12 +44,14 @@ We process sentences according to their syntax structure and semantics during a 
 
 (Video presentation coming soon...)
 
+_____________________________________________________________________________
+
 # What limits our visual cognition?
 Our visual cognition is limited. We can only attend to so many things at a given time. Take the famous Shell game for example. 
 
 <iframe src="https://giphy.com/embed/NusOH30J7QiJy" width="360" height="215" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-memory-NusOH30J7QiJy">via GIPHY</a></p>
 
 
-We can only attend to so many things at a given time. Why is it so? Why is it that some people are better than others in these tasks? We explored these questions in the context of Multiple Object Tracking paradigm. Here we hypothesized, and show that the quality of inputs that enter our visual system limits our visual cognition, and further, individual differences in visual cognition are the result of differences in eye movement strategies participants use.
+We can only attend to so many things at a given time. Why is it so? Why is it that some people are better than others in these tasks? We explored these questions in the context of Multiple Object Tracking paradigm. Here we hypothesized, and have shown that the quality of inputs that enter our visual system limits our visual cognition. Further, individual differences in visual cognition are the result of differences in eye movement strategies participants use.
 
 ![Hiearchical processing in visual narratives](/pics/gallery/Graphical_abstract_MOT.png)
