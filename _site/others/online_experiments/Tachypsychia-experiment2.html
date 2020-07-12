@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="text-align:center">
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- ======================== TIMESTAMP ======================= -->
+<script>
+  var currentDate = new Date();
+  var date = currentDate.getDate();
+  var month = currentDate.getMonth();
+  var year = currentDate.getFullYear();
+  var dateString = date + "-" + (month + 1) + "-" + year;
+</script>
+
+<!-- ======================== METADATA ======================= -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A replication of the original oddball paradigm.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, jQuery, Cognition, Cognitive Science, Cognitive Psychology, Oddball Paradigm">
+  <meta name="author" content="Shanmukh Aditya Upadhyayula">
+  <link rel="shortcut icon" type="image/png" href="https://cdn.tutsplus.com/net/uploads/legacy/371_cssBestPractices/circle.png" />
+  <link rel="stylesheet" type="text/css" href="Oddball_Instructions.css">
+  <title>JHU VSG Study 10</title>
+</head>
+
+<!-- ======================== INTRODUCTION ======================= -->
+
+<body>
+  <!-- Vision Sciences Group Logo -->
+  <img src="https://static1.squarespace.com/static/53868534e4b03e5662d8336e/t/53a23905e4b0365dad7a353c/1403140386069/" alt="The Vision Sciences Group" width="800px" id="visionLogo">
+
+  <!-- Vertically and horizontally entered intro block wrapper -->
+  <div class="outer">
+    <div class="middle">
+      <div class="boxed">
+        <div>
+          <h1><strong>Instructions</strong></h1>
+          <p id="p1">Welcome! Thank you for agreeing to participate in this study.
+            Please read the following directions carefully before beginning.</p>
+          <p id="p2">In this study, we want to examine your ability to perceive duration — how long something lasts on the screen. <br> <br> The task is simple. In each trial, you will see a disc appear on the screen and then disappear. There will be three such disks - each lasting for the same amount of time.<br> <br>
+            We want you to pay attention to how long the last disc lasts. Get a sense of its duration and report the duration by pressing and holding down the spacebar. </p>
+          <p id="p3">
+            As soon as you hit the SPACEBAR, this will make another disc appear on the screen. Let go of the SPACEBAR when you think your disc has been on the screen as long as the standard disc you saw on that trial.</p>
+          <p id="p4">So the point is we want you to reproduce the duration that you experienced. Remember we want to know how long each of the three black discs lasted, not how long they lasted in all together. <br> <br> Now, get ready! Press F11
+            to make your viewport into fullscreen mode, then place one finger on the [S] key and another on the
+            [L] key on your keyboard. Oh! And one more thing!<br> </p>
+          <p id="p23">
+            This study should take about 10-12 minutes to complete — following which you will paste the unique code into the MTurk website to submit the hit. <br>
+            Your data will be invalid to us if you perform poorly in this task. So, please give your best. <br> </p>
+           <p id = "p231">
+            Please email us at visualthinkinglabjhu@gmail.com and let us know if you have any problems or confusion while completing this HIT</p>            
+          <button class="btn-hover color" id="regularButton">Continue →</button>
+          <button class="btn-hover color-start" id="startButton">Begin Experiment!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <div class = "End">
+      <div id="debrief">
+      <h1>Debriefing Form</h1>
+      <p id="topDisplay">
+        You are done with the study! Thank you for participating.
+        In this study, we were primarily interested in how cognitive processes
+        such as attention influence how we perceive time.
+        Please describe any problems that you might have faced, and click [Submit].</p>
+      <textarea id="feedbackBox" rows="4" cols="50" placeholder="Feedback Here!"></textarea>
+      <button class="btn-hover color-start" id="endButton">Submit</button>
+      <p id="feedback">Thank you! Please email us at visualthinkinglabjhu@gmail.com and let us know if you had any
+        problems or confusion while completing this HIT.</p>     
+    </div>     
+  </div>   
+
+  <!-- Mid-experiment reminder to make a duration choice -->
+  <div id="p5">
+      <p> <strong>Press and hold SPACEBAR to report the duration of the last stimulus. </strong></p>
+  </div>
+
+    <div class = "topright"> <p id = "rewardCounter"> Total reward : 0 </p>
+  </div>
+           
+    
+    <div id = "instructions"><p> Instruct here!</p> </div>
+
+  <!-- ======================== STIMULI ======================= -->
+  <div id="std"></div>
+  <div id="oddBall"></div>
+  <div id="redBall"></div>
+  <div id="stdFeedback"></div>
+
+  <!-- ======================== ANIMATIONS ======================= -->
+  <script>
+    $("#std,#oddBall,#redBall,#stdFeedback").hide();
+    $("#rewardCounter").hide();   
+
+    // ======================== FISHER-YATES/KNUTH SHUFFLE ======================= //
+    // Randomized oddball disk duration array and Knuth shuffle
+    function shuffle(arguments) {
+      var i = arguments[0].length;
+      if (i == 0)
+        return false;
+      else {
+        while (--i) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tempi1 = arguments[0][i];
+          var tempj1 = arguments[0][j];
+          var tempi2 = arguments[1][i];
+          var tempj2 = arguments[1][j];
+          arguments[0][i] = tempj1;
+          arguments[0][j] = tempi1;
+          arguments[1][i] = tempj2;
+          arguments[1][j] = tempi2;
+        }
+      }
+        return arguments
+    }
+
+    // ======================== GET BROWSER ======================= //
+    // Get browser (credit to Nimesh and other users of StackOverflow)
+
+    function getBrowser() {
+      if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf("OPR")) != -1) {
+        return "Opera";
+      } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+        return "Chrome";
+      } else if (navigator.userAgent.indexOf("Safari") != -1) {
+        return "Safari";
+      } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        return "Firefox";
+      } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) {
+        // If IE > 10
+        return "IE";
+      } else {
+        return "Unknown";
+      }
+    }
+
+    // ======================== GET AMAZON MTURK WORKER ID ======================= //
+    // Get inferred subject ID from URL (credit to Eyal Peer)
+
+    function getSubjectID() {
+      var paramstr = window.location.search.substring(1);
+      var parampairs = paramstr.split("&");
+      for (i in parampairs) {
+        var pair = parampairs[i].split("=");
+        if (pair[0] == "workerId") {
+          return pair[1];
+        }
+      }
+    }
+
+    // ======================== ENDPAGE ======================= //
+
+    function showEndPage() {
+      $("#debrief").show()
+      $("#instructions").hide()    
+      $("#endButton").attr("onclick", "postData()");
+      $("#endButton").html("Submit");
+    }
+
+    // ======================== POST DATA TO SERVER ======================= //
+
+    function postData() {
+      // update final participant stats in last trial of response
+      $("#debrief").hide()
+      feedback = $("#feedbackBox").val();
+      endTime = new Date();
+      window.frame[window.frame.length - 1].feedback = feedback;
+      window.frame[window.frame.length - 1].endTime = endTime;
+      // Collect responses into JSON / csv file
+      var dataString = JSON.stringify(window.frame);
+      // post response to server
+      $.post("logTrial.py", {
+        subjectID: window.subjectID,
+        dataString: dataString
+      });
+      $("#instructions").show();    
+      $("#instructions").text("Thank you — please copy and enter the following code into the HIT: ADI29JF39");
+    }
+
+    // ======================== TRIAL GENERATOR ======================= //
+    // Generates each experiment after looping through 54 oddballs, 7-12 standard disks and ending with 3 disks.
+    function trialGenerator() {
+      var trialInfo = [];
+      var oddBag = [];
+      var oddType = [];
+      var startTime = new Date();
+      var oddBallDurations = [750, 825, 900, 975, 1050, 1125, 1250, 1375, 1450, 1525];
+      var oddBallTypes = ["odd", "stdFeedback", "red"];
+      var nreps = 3;
+      for (reps = 0; reps < nreps; reps++) { 
+          for(i=0; i<oddBallTypes.length; i++){ 
+              oddBag=oddBag.concat(oddBallDurations); 
+              temp=[];
+              for(j=0; j<oddBallDurations.length; j++){ 
+                  temp=temp.concat(oddBallTypes[i]); 
+              } 
+              oddType=oddType.concat(temp) 
+          }
+      }
+      temp2 = shuffle([oddBag,oddType]);      
+      oddBag = temp2[0];
+      oddType = temp2[1];     
+      var oddBallIndex;
+      for (oddBallIndex = 0; oddBallIndex < oddBallDurations.length * nreps; oddBallIndex++) {
+        var stdNumber = 3 //(Math.floor(Math.random() * (13 - 7)) + 7); // Between 7-12 regular disks
+        for (stdCount = 0; stdCount < stdNumber; stdCount++) {
+          var isi = 1000 //Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "std",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null"
+          });
+        }
+        if (oddType[oddBallIndex] == "odd") {
+          // Looming black oddball
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "odd",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null"
+          });
+        } else if (oddType[oddBallIndex] == "red") {
+          // Stationary red oddball
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "red",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null"
+          });
+        } else {
+          // Standard
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "stdFeedback",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null"
+          });
+        }
+      }
+      return trialInfo;
+    }
+
+    // ======================== TRIAL GENERATION ======================= //
+
+    var browser = getBrowser();
+    var subjectID = getSubjectID()
+    var frame = trialGenerator();
+    console.log("frame length :",frame.length)
+    var loop_active = true;
+    var loop_break = false
+    var responseTimeStamp = 3;
+    var counter = 0;
+    var rewardCounter = 0;  
+
+    // ======================== TRIAL GENERATION RUN ======================= //
+    // Standard disk toggling function
+
+//    $(document).keyup(function(e) {
+//      console.log(e.keyCode);
+//      if ((e.keyCode == 83 || e.keyCode == 76) && !window.loop_active && !window.loop_break) {
+//
+//        $("#p5").hide();
+//        window.loop_active = true;
+//        window.counter++;
+//        setTimeout(function() {
+//          ballAnimation(frame, window.counter);
+//        }, 0);
+//        window.frame[window.responseTimeStamp]["judgment"] = e.keyCode;
+//        console.log(window.frame[window.responseTimeStamp]);  
+//        window.responseTimeStamp = 15 + window.counter;
+//      } else if ((e.keyCode == 83 || e.keyCode == 76) && !window.loop_break) {
+//        $("#p5").hide();
+//      } else if ((e.keyCode == 83 || e.keyCode == 76) && window.loop_break) {
+//          window.frame[window.responseTimeStamp]["judgment"] = e.keyCode;
+//          console.log("The End!")
+//          $("#p5").hide();
+//          showEndPage();
+//          $("#topDisplay,#feedbackBox,#endButton,#feedback").show();
+//          $("#endButton").attr("onclick", "postData()");
+//          $("#endButton").html("Submit");
+//      }
+//        else{}
+//    });
+    
+    var output = document.getElementById('output'),
+    pressed = {};
+
+    window.onkeydown = function(e) {
+        if ( pressed[e.which] ) return;
+        if(!window.loop_active && !window.loop_break) {
+            pressed[e.which] = e.timeStamp;
+            $("#p5").hide();
+            window.loop_active=true;
+            frameWindow = frame[window.counter];
+            
+            if (frameWindow["type"] == "odd") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+                setTimeout(function() {
+                    $("#oddBall").show();
+                },0);
+            var expansion = String(0.25*frameWindow["duration"]);
+            console.log(window.counter)
+            console.log(window.responseTimeStamp)
+            $("#oddBall").animate({
+                height: expansion,
+                width: expansion
+            }, frameWindow["duration"], "linear")
+            setTimeout(function() {
+                $("#oddBall").hide();
+            }, frameWindow["duration"]);
+            console.log($("#oddBall").height());
+            
+
+            } else if (frameWindow["type"] == "red") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                console.log(window.counter)
+                console.log(window.responseTimeStamp)
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+                setTimeout(function() {
+                    $("#redBall").show();
+                }, 0);
+                setTimeout(function() {
+                    $("#redBall").hide();
+                }, frameWindow["duration"]);
+
+            } else if (frameWindow["type"] == "stdFeedback") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                console.log(window.counter)
+                console.log(window.responseTimeStamp)
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+                setTimeout(function() {
+                    $("#stdFeedback").show();
+                }, 0);
+                setTimeout(function() {
+                    $("#stdFeedback").hide();
+                }, frameWindow["duration"]);
+
+
+            }
+        }
+        
+    };
+
+    window.onkeyup = function(e) {
+        if ( !pressed[e.which] ) return; 
+        if(window.counter < window.frame.length){
+        console.log(window.counter);
+        $("#std,#oddBall,#redBall,#stdFeedback").hide();
+        frameWindow = frame[window.counter];
+        console.log(frameWindow);
+
+        var duration = ( e.timeStamp - pressed[e.which] );
+        //output.innerHTML += '<p>Key ' + e.which  + ' was pressed for ' + duration + ' seconds</p>';
+        pressed[e.which] = 0;
+        window.frame[window.responseTimeStamp]["judgment"] = duration/1000;
+        difference = Math.abs(duration - frameWindow["duration"])/1000
+        var currentReward;
+        currentReward = Math.pow(Math.E, -difference*2).toFixed(2)*10
+        if (duration <= frameWindow["duration"]){
+            $("#p5").text("You earned " + currentReward.toFixed(2) + " out of 10 points in this round");
+            window.rewardCounter += currentReward;
+            frame[window.counter]["judgment"]=duration;
+            $("#rewardCounter").text("Total points "+window.rewardCounter.toFixed(2))
+            $("#p5").show();
+            setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, 1000+frameWindow["isi"]);
+        }else{
+            $("#p5").text("Your response exceed the actual time");
+            $("#p5").show();
+            frame[window.counter]["judgment"]=duration;
+            setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, 1000+frameWindow["isi"]);
+            
+        }
+        
+        if(window.loop_break){
+          console.log("The End!")
+          $("#p5").hide();
+          showEndPage();
+          $("#topDisplay,#feedbackBox,#endButton,#feedback").show();
+          $("#endButton").attr("onclick", "postData()");
+          $("#endButton").html("Submit");
+        }
+        }else{
+                setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, frameWindow["isi"]);
+        }
+    };
+
+    function download(content, fileName, contentType) {
+        var a = document.createElement("a");
+        var file = new Blob([content], {type: contentType});
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+    }  
+      
+    var ballAnimation = function(frame, counter) {
+      var frameWindow;
+      if (window.counter < window.frame.length) {
+        frameWindow = frame[window.counter];
+        if (frameWindow["type"] == "std") {
+          $("#oddBall").height(1).width(1);
+          $("#oddBall,#redBall,#stdFeedback,#p5").hide();
+          $("#rewardCounter").show();    
+            $("#p5").text("Press and hold SPACEBAR to report the duration of the last stimulus");    
+          if (window.loop_active) {
+            window.counter++;
+            setTimeout(function() {
+              $("#std").show();
+            }, frameWindow["isi"]);
+            setTimeout(function() {
+              $("#std").hide();
+            }, frameWindow["isi"] + frameWindow["duration"]);
+            setTimeout(function() {
+              ballAnimation(frame, window.counter);
+            }, frameWindow["isi"] + frameWindow["duration"])
+          } else {
+              window.loop_active = false;
+                setTimeout(function() {
+                  $("#p5").show();
+              }, 1000);
+          }
+        }else {
+              window.loop_active = false;
+                setTimeout(function() {
+                  $("#p5").show();
+              }, 1000);
+          } 
+      } else {
+          console.log("The End!")
+          $("#p5").hide();
+          showEndPage();
+          $("#topDisplay,#feedbackBox,#endButton,#feedback").show();
+          $("#endButton").attr("onclick", "postData()");
+          $("#endButton").html("Submit");
+          JSONObj = JSON.stringify(frame);
+          download(JSONObj);          
+      }
+    }
+
+    // ======================== MAIN BLOCK ======================= //
+    // Carries out each experiment trial via animations
+    $("#feedbackBox,button,#p2,#p3,#p4,#p5,#debrief,#instructions,#p23,#p231").hide();
+    setTimeout(function() {
+      $("#p1").fadeIn("slow")
+    }, 500);
+    
+    setTimeout(function() {
+      $("#regularButton").fadeIn("slow")
+    }, 1750);
+    $("#regularButton").click(function() {
+      $("#regularButton,#p1").hide();
+      setTimeout(function() {
+        $("#p2").fadeIn("slow")
+      }, 500);
+      setTimeout(function() {
+        $("#regularButton").fadeIn("slow")
+      }, 3000);
+      $("#regularButton").click(function() {
+        $("#regularButton").hide();
+        $("#p2").remove();
+        setTimeout(function() {
+          $("#p3").fadeIn("slow")
+        }, 500);
+        setTimeout(function() {
+          $("#regularButton").fadeIn("slow")
+        }, 2000);
+        $("#regularButton").click(function() {
+          $("#p3").remove();
+          $('#regularButton').hide();    
+          setTimeout(function() {
+            $("#p4").fadeIn("slow")
+          }, 500);
+          setTimeout(function() {
+            $("#regularButton").fadeIn("slow")
+          }, 2000);
+          $("#regularButton").click(function() {
+            //$("#regularButton,img,.outer").remove();
+            $('#regularButton').remove();
+            $('#p4').remove();  
+            $('#p23').show(); 
+            setTimeout(function(){$('#p231').fadeIn("slow")}, 1000);  
+          setTimeout(function() {
+            $("#startButton").fadeIn("slow")
+          }, 2000);  
+              $('#startButton').click(function(){
+                 $("#startButton,img,.outer").remove(); 
+                $("html").css({
+                  "cursor": "none"
+                })
+                ballAnimation(frame, counter);
+                $("html").css({
+                  "cursor": "default"
+                })
+              })
+
+          })
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
