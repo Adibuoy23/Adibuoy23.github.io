@@ -218,7 +218,9 @@
             "subjectID": window.subjectID,
             "startTime": startTime,
             "endTime": "null",
-            "feedback": "null"
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
           });
         }
         if (oddType[oddBallIndex] == "odd") {
@@ -233,7 +235,9 @@
             "subjectID": window.subjectID,
             "startTime": startTime,
             "endTime": "null",
-            "feedback": "null"
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
           });
         } else if (oddType[oddBallIndex] == "red") {
           // Stationary red oddball
@@ -247,7 +251,9 @@
             "subjectID": window.subjectID,
             "startTime": startTime,
             "endTime": "null",
-            "feedback": "null"
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
           });
         } else {
           // Standard
@@ -261,7 +267,9 @@
             "subjectID": window.subjectID,
             "startTime": startTime,
             "endTime": "null",
-            "feedback": "null"
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
           });
         }
       }
@@ -391,8 +399,10 @@
         if (duration <= frameWindow["duration"]){
             $("#p5").text("You earned " + currentReward.toFixed(2) + " out of 10 points in this round");
             window.rewardCounter += currentReward;
-            frame[window.counter]["judgment"]=duration;
-            $("#rewardCounter").text("Total points "+window.rewardCounter.toFixed(2))
+            frame[window.counter-1]["judgment"]=duration;
+            frame[window.counter-1]["currentReward"] = currentReward.toFixed(2);
+            frame[window.counter-1]["totalReward"] = window.rewardCounter.toFixed(2);
+            $("#rewardCounter").text("Total points "+window.rewardCounter.toFixed(2));
             $("#p5").show();
             setTimeout(function() {
                 ballAnimation(frame, window.counter);
@@ -400,7 +410,9 @@
         }else{
             $("#p5").text("Your response exceed the actual time");
             $("#p5").show();
-            frame[window.counter]["judgment"]=duration;
+            frame[window.counter-1]["judgment"]=duration;
+            frame[window.counter-1]["currentReward"] = currentReward.toFixed(2);
+            frame[window.counter-1]["totalReward"] = window.rewardCounter.toFixed(2);
             setTimeout(function() {
                 ballAnimation(frame, window.counter);
             }, 1000+frameWindow["isi"]);
@@ -470,7 +482,7 @@
           $("#endButton").attr("onclick", "postData()");
           $("#endButton").html("Submit");
           JSONObj = JSON.stringify(frame);
-          download(JSONObj);          
+          download(JSONObj, "Tachypsychia_exp2_data.json", "json");          
       }
     }
 

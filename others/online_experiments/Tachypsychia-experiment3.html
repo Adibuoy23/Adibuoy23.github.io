@@ -380,17 +380,17 @@
                 ballAnimation(frame, window.counter);
             }, 500+frameWindow["isi"]);
             frame[window.counter-1]["judgment"]=duration;
-            frame[window.counter-1]["currentReward"]=currentReward;
-            frame[window.counter-1]["TotalReward"] = window.rewardCounter;
+            frame[window.counter-1]["currentReward"]=currentReward.toFixed(2);
+            frame[window.counter-1]["TotalReward"] = window.rewardCounter.toFixed(2);
         }else{
             $("#p5").text("Your response exceed the actual time");
             $("#p5").show();
             setTimeout(function() {
                 ballAnimation(frame, window.counter);
             }, 500+frameWindow["isi"]);
-            frame[window.counter]["judgment"]=duration;
-            frame[window.counter]["currentReward"]=currentReward;
-            frame[window.counter]["TotalReward"]=window.rewardCounter;
+            frame[window.counter-1]["judgment"]=duration;
+            frame[window.counter-1]["currentReward"]=currentReward.toFixed(2);
+            frame[window.counter-1]["TotalReward"]=window.rewardCounter.toFixed(2);
             
         }
         
@@ -521,7 +521,7 @@
           $("#endButton").attr("onclick", "postData()");
           $("#endButton").html("Submit");
           JSONObj = JSON.stringify(frame);
-          download(JSONObj);
+          download(JSONObj, "Tachypsychia_exp3_data.json","data");
       }
     }
 
