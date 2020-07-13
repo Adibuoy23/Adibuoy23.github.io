@@ -382,10 +382,10 @@
 
     window.onkeyup = function(e) {
         if ( !pressed[e.which] ) return; 
-        if(window.counter < window.frame.length){
+        if(window.counter < window.frame.length+1){
         console.log(window.counter);
         $("#std,#oddBall,#redBall,#stdFeedback").hide();
-        frameWindow = frame[window.counter];
+        frameWindow = frame[window.counter-1];
         console.log(frameWindow);
 
         var duration = ( e.timeStamp - pressed[e.which] );
@@ -405,7 +405,7 @@
             $("#p5").show();
             setTimeout(function() {
                 ballAnimation(frame, window.counter);
-            }, 1000+frameWindow["isi"]);
+            }, 500+frameWindow["isi"]);
         }else{
             $("#p5").text("Your response exceed the actual time");
             $("#p5").show();
@@ -414,7 +414,7 @@
             frame[window.counter-1]["totalReward"] = window.rewardCounter.toFixed(2);
             setTimeout(function() {
                 ballAnimation(frame, window.counter);
-            }, 1000+frameWindow["isi"]);
+            }, 500+frameWindow["isi"]);
             
         }
         

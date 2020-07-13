@@ -361,7 +361,7 @@
         if(window.counter < window.frame.length+1){
         console.log(window.counter);
         $("#std,#oddBall,#redBall,#stdFeedback").hide();
-        frameWindow = frame[window.counter];
+        frameWindow = frame[window.counter-1];
 
         var duration = ( e.timeStamp - pressed[e.which] );
         //output.innerHTML += '<p>Key ' + e.which  + ' was pressed for ' + duration + ' seconds</p>';
@@ -418,7 +418,7 @@
 
     var ballAnimation = function(frame, counter) {
       var frameWindow;
-      if (window.counter < window.frame.length+1) {
+      if (window.counter < window.frame.length) {
         frameWindow = frame[window.counter];
         if (window.loop_active){
             if (frameWindow["type"] == "std") {  
@@ -451,7 +451,7 @@
                         $("#std").hide();
                         $("#oddBall").show();
                     },frameWindow["isi"]+frameWindow["oddOnset"]*frameWindow["duration"]);
-                var expansion = String(0.25*frameWindow["duration"]+250);
+                var expansion = String(0.125*frameWindow["duration"]+250);
                 console.log(window.counter)
                 console.log(window.responseTimeStamp)
                 setTimeout(function(){$("#oddBall").animate({
