@@ -349,7 +349,6 @@
         if(!window.loop_active && !window.loop_break) {
             pressed[e.which] = e.timeStamp;
             $("#p5").hide();
-            window.loop_active=true;
             frameWindow = frame[window.counter];
 
         }
@@ -358,7 +357,9 @@
 
     window.onkeyup = function(e) {
         if ( !pressed[e.which] ) return; 
+        if(!window.loop_active && !window.loop_break) {
         if(window.counter < window.frame.length+1){
+        window.loop_active=true;    
         console.log(window.counter);
         $("#std,#oddBall,#redBall,#stdFeedback").hide();
         frameWindow = frame[window.counter-1];
@@ -385,6 +386,7 @@
             $("#p5").text("Your response exceed the actual time");
             $("#p5").show();
             setTimeout(function() {
+                window.loop_active=true;
                 ballAnimation(frame, window.counter);
             }, 500+frameWindow["isi"]);
             frame[window.counter-1]["judgment"]=duration;
@@ -401,10 +403,8 @@
           $("#endButton").attr("onclick", "postData()");
           $("#endButton").html("Submit");
         }
-        }else{
-                setTimeout(function() {
-                ballAnimation(frame, window.counter);
-            }, frameWindow["isi"]);
+        }else{ return;
+        };
         }
     };
     
@@ -440,7 +440,6 @@
             } else if (frameWindow["type"] == "odd") {
                     console.log(frameWindow);
                     $("#oddBall").height(250).width(250);
-                    window.loop_active = false;
                     window.responseTimeStamp = window.counter;
                     window.counter++;
                     $("#std,#oddBall,#redBall,#stdFeedback").hide();
@@ -462,14 +461,14 @@
                     $("#oddBall").hide();
                 }, frameWindow["isi"]+frameWindow["duration"]);
                 setTimeout(function() {
-                  ballAnimation(frame, window.counter);
+                  window.loop_active = false;     
+                  ballAnimation(frame, window.counter);   
                 }, frameWindow["isi"] + frameWindow["duration"])
                 console.log($("#oddBall").height());
 
 
                 } else if (frameWindow["type"] == "red") {
                     console.log(frameWindow);
-                    window.loop_active = false;
                     window.responseTimeStamp = window.counter;
                     window.counter++;
                     console.log(window.counter)
@@ -486,12 +485,12 @@
                         $("#redBall").hide();
                     }, frameWindow["isi"]+frameWindow["duration"]);
                     setTimeout(function() {
-                  ballAnimation(frame, window.counter);
+                  window.loop_active = false;           
+                  ballAnimation(frame, window.counter);     
                 }, frameWindow["isi"] + frameWindow["duration"])
 
                 } else if (frameWindow["type"] == "stdFeedback") {
                     console.log(frameWindow);
-                    window.loop_active = false;
                     window.responseTimeStamp = window.counter;
                     window.counter++;
                     console.log(window.counter)
@@ -504,7 +503,8 @@
                         $("#stdFeedback").hide();
                     }, frameWindow["isi"] + frameWindow["duration"]);
                     setTimeout(function() {
-                  ballAnimation(frame, window.counter);
+                  window.loop_active = false;        
+                  ballAnimation(frame, window.counter);        
                 }, frameWindow["isi"] + frameWindow["duration"])
                 }
             }else {

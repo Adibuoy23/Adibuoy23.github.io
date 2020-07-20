@@ -462,15 +462,13 @@
               ballAnimation(frame, window.counter);
             }, frameWindow["isi"] + frameWindow["duration"])
           } else {
-              window.loop_active = false;
                 setTimeout(function() {
-                  $("#p5").show();
+                  $("#p5").show();window.loop_active = false;
               }, 1000);
           }
         }else {
-              window.loop_active = false;
                 setTimeout(function() {
-                  $("#p5").show();
+                  $("#p5").show(); window.loop_active = false;
               }, 1000);
           } 
       } else {
