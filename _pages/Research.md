@@ -37,12 +37,12 @@ _____________________________________________________________________________
 We process sentences according to their syntax structure and semantics during a reading comprehension task. We tend to spend more time staring at a word that violates the syntactic structure of the sentence. Visual narratives, on the other hand, are short stories mainly told using pictures - usually comic strips with events that are unfloding over time within the strip. Do we process visual narratives according to their underlying narrative syntax structure similar to the reading comprehension tasks?
 
 
-![Hiearchical processing in visual narratives](/pics/gallery/hierachical_processing_visual_narratives.png)
+![Hiearchical processing in visual narratives](/pics/gallery/Earley_Parser.gif)
 
 
-`Our preliminary analysis using psychophysics and computational modelling suggests that we might be processing visual narratives according to their underlying narrative structure`
+`Our preliminary analysis using psychophysics and computational modelling suggests that we might be processing visual narratives according to their underlying narrative structure. Here is a presentation on the same`
 
-(Video presentation coming soon...)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eEBSmQwxVmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _____________________________________________________________________________
 
