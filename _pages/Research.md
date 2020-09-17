@@ -47,11 +47,12 @@ We process sentences according to their syntax structure and semantics during a 
 _____________________________________________________________________________
 
 # What limits our visual cognition?
+`In collaboration with Jon Flombaum` 
 Our visual cognition is limited. We can only attend to so many things at a given time. Take the famous Shell game for example. 
 
 <iframe src="https://giphy.com/embed/NusOH30J7QiJy" width="360" height="215" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-memory-NusOH30J7QiJy">via GIPHY</a></p>
 
 
-We can only attend to so many things at a given time. Why is it so? Why is it that some people are better than others in these tasks? We explored these questions in the context of Multiple Object Tracking paradigm. Here we hypothesized, and have shown that the quality of inputs that enter our visual system limits our visual cognition. Further, individual differences in visual cognition are the result of differences in eye movement strategies participants use.
+We can only attend to so many things at a given time. Why is it so? Why is it that some people are better than others in these tasks? We explored these questions in the context of Multiple Object Tracking paradigm. Here we hypothesized, and have shown that the quality of inputs that enter our visual system limits our visual cognition. Further, individual differences in visual cognition are the result of differences in eye movement strategies participants use [pdf](https://adibuoy23.github.io/others/MOT_paper.pdf).
 
-![Hiearchical processing in visual narratives](/pics/gallery/Graphical_abstract_MOT.png)
+![MOT paper](/pics/gallery/Graphical_abstract_MOT.png)
