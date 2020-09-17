@@ -1,6 +1,6 @@
 ---
 title:  "Our paper is out"
-date:   2020-07-22
+date:   2020-09-16
 layout: single
 author_profile: true
 comments: true
