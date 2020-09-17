@@ -8,8 +8,9 @@ tags: [Multiple Object Tracking, Individual Differences, Eye Tracking, Computati
 ---
 
 <p class="message">
-I am excited to share that our paper exploring individual differences in Multiple Object Tracking (MOT) is out. Here is the [pdf](https://adibuoy23.github.io/others/MOT_paper.pdf) of the same. I am looking forward to hearing your thoughts on this!
+I am excited to share that our paper exploring individual differences in Multiple Object Tracking (MOT) is out. I am looking forward to hearing your thoughts on this!
 
 
 </p>
 
+Here is the [pdf](https://adibuoy23.github.io/others/MOT_paper.pdf) of the same

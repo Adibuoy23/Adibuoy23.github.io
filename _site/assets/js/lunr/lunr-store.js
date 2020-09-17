@@ -24,7 +24,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Our paper is out",
-        "excerpt":" I am excited to share that our paper exploring individual differences in Multiple Object Tracking (MOT) is out. Here is the [pdf](https://adibuoy23.github.io/others/MOT_paper.pdf) of the same. I am looking forward to hearing your thoughts on this!      ","categories": [],
+        "excerpt":" I am excited to share that our paper exploring individual differences in Multiple Object Tracking (MOT) is out. I am looking forward to hearing your thoughts on this!      Here is the pdf of the same  ","categories": [],
         "tags": ["Multiple Object Tracking","Individual Differences","Eye Tracking","Computational modelling","Kalman Filter"],
         "url": "/Our-paper-is-out/",
         "teaser": null
