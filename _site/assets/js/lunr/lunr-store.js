@@ -28,4 +28,10 @@ var store = [{
         "tags": ["Multiple Object Tracking","Individual Differences","Eye Tracking","Computational modelling","Kalman Filter"],
         "url": "/Our-paper-is-out/",
         "teaser": null
+      },{
+        "title": "Python tutorials on introduction to algorithms",
+        "excerpt":"Recently, I have been spending some time learning about algorithms and data structures. These are particularly useful if you want to * Prepare for interviews with Google, FB, Apple, Microsoft, Amazon etc. * Write optimal code [for eg: reducing complexity from O(n) to O(log n)] * Learn Reinforcement Learning Algorithms...","categories": [],
+        "tags": ["Tree search","BFS","DFS","Dynamic Programming","Python","Jupyter notebook","Google colab"],
+        "url": "/Intro-to-Algorithms/",
+        "teaser": null
       }]

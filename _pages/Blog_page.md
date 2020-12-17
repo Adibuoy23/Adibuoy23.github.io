@@ -27,6 +27,7 @@ Most of my blogs are going to be technical blogs written mainly for my own refer
 </ul>
 
 ## Notebooks:
+- Jupyter notebook lab tutorials for algorithms (Tree search & Sort) are posted here
 - Jupyter notebook lab tutorials on Deep Learning using Pytorch (Coming soon...)
 
 
