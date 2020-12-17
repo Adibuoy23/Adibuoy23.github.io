@@ -1,6 +1,6 @@
 ---
 title:  "Python tutorials on introduction to algorithms"
-date:   2020-09-16
+date:   2020-12-16
 layout: single
 author_profile: true
 comments: true
