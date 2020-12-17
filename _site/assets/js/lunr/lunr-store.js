@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Python tutorials on introduction to algorithms",
-        "excerpt":"Recently, I have been spending some time learning about algorithms and data structures. These are particularly useful if you want to * Prepare for interviews with Google, FB, Apple, Microsoft, Amazon etc. * Write optimal code [for eg: reducing complexity from O(n) to O(log n)] * Learn Reinforcement Learning Algorithms...","categories": [],
+        "excerpt":"Recently, I have been spending some time learning about algorithms and data structures. These are particularly useful if you want to: Prepare for interviews with Google, FB, Apple, Microsoft, Amazon etc. Write optimal code. [for eg: reducing complexity from O(n) to O(log n)] Learn Reinforcement Learning Algorithms Here is the...","categories": [],
         "tags": ["Tree search","BFS","DFS","Dynamic Programming","Python","Jupyter notebook","Google colab"],
         "url": "/Intro-to-Algorithms/",
         "teaser": null
