@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="text-align:center">
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- ======================== TIMESTAMP ======================= -->
+<script>
+  var currentDate = new Date();
+  var date = currentDate.getDate();
+  var month = currentDate.getMonth();
+  var year = currentDate.getFullYear();
+  var dateString = date + "-" + (month + 1) + "-" + year;
+</script>
+
+<!-- ======================== METADATA ======================= -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A replication of the original oddball paradigm.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, jQuery, Cognition, Cognitive Science, Cognitive Psychology, Oddball Paradigm">
+  <meta name="author" content="Shanmukh Aditya Upadhyayula">
+  <link rel="shortcut icon" type="image/png" href="https://cdn.tutsplus.com/net/uploads/legacy/371_cssBestPractices/circle.png" />
+  <link rel="stylesheet" type="text/css" href="Oddball_Instructions.css">
+  <title>JHU VSG Study 10</title>
+</head>
+
+<!-- ======================== INTRODUCTION ======================= -->
+
+<body>
+  <!-- Vision Sciences Group Logo -->
+  <img src="https://static1.squarespace.com/static/53868534e4b03e5662d8336e/t/53a23905e4b0365dad7a353c/1403140386069/" alt="The Vision Sciences Group" width="600px" id="visionLogo">
+
+  <!-- Vertically and horizontally entered intro block wrapper -->
+  <div class="outer">
+    <div class="middle">
+        <h1><strong>Instructions</strong></h1>
+      <div class="boxed">
+        <div id="instructions-start">
+          <p id="p1">Welcome! Thank you for agreeing to participate in this study.
+            Please read the following directions carefully before beginning.</p>
+        </div>
+      </div>
+        <p id = "scroll" style = right:100%;font-size:10pt;> Scroll down...</p>   
+    </div>
+  </div>
+    
+<button id = "previous" onclick = "previous()" href="#" class="button hover">&laquo; Previous</button>
+<button id = "next" onclick = "next()" href="#" class="button hover">Next &raquo;</button> 
+ 
+    
+  <div class = "End">
+      <div id="debrief">
+      <h1>Debriefing Form</h1>
+      <p id="topDisplay">
+        You are done with the study! Thank you for participating.
+        In this study, we were primarily interested in how cognitive processes
+        such as attention influence how we perceive time.
+        Please describe any problems that you might have faced, and click [Submit].</p>
+      <textarea id="feedbackBox" rows="4" cols="50" placeholder="Feedback Here!"></textarea>
+      <button class="button hover" id="endButton">Submit</button>
+      <p id="feedback">Thank you! Please email us at visualthinkinglabjhu@gmail.com and let us know if you had any
+        problems or confusion while completing this HIT.</p>     
+    </div>     
+  </div>   
+
+  <!-- Mid-experiment reminder to make a duration choice -->
+  <div id="p5">
+      <p> <strong>Press and hold SPACEBAR to report the duration of the last stimulus. </strong></p>
+  </div>
+
+    <div class = "topright"> <p id = "rewardCounter"> Total reward : 0 </p>
+  </div>
+           
+    
+    <div id = "instructions"><p> Instruct here!</p> </div>
+
+  <!-- ======================== STIMULI ======================= -->
+  <div id="std" class = "std"></div>
+  <div id="oddBall" class = "oddBall"></div>
+  <div id="redBall" class = "redBall"></div>
+  <div id="stdFeedback" class = "stdFeedback"></div>
+
+  <!-- ======================== ANIMATIONS ======================= -->
+  <script>
+    instructions = ['Welcome! Thank you for agreeing to participate in this study.', 'In this study, we want to examine your ability to perceive duration — how long something lasts.', 'The task is simple. In each trial, you will see a disc appear on the screen and then disappear.</br> </br>' + '<strong>'+'Press D to see what we mean' +'</strong>' , 'Infact, there will be a sequence of three such discs - each lasting for the same amount of time.</br> </br>' + '<strong>'+'Press S to see an example sequence' +'</strong>','We want you to pay attention to how long the last disc lasts. </br> </br> Get a sense of its duration and report the duration by pressing and holding down the spacebar.','Upon pressing the space bar, sometimes another disc will appear on the screen. </br> </br> Sometimes you might not see any disc at all upon pressing the space bar. </br></br>. In the event that a disc appears, let go of the spacebar when you think your disc has been on the screen as long as the standard disc you saw on that trial.</br> </br>' + '<strong>'+'Press and hold SPACEBAR to try it out' +'</strong>' ,'So the point is we want you to reproduce the duration that you experienced. </br> </br> Remember we want to know how long each of the three black discs lasted, not how long they lasted in all together.  </br> </br> Oh! And one more thing! You might have noticed some feedback displaying either the number of points you have scored, or that you have exceeded the time limit ', 'We really want you to be as accurate as you can. So we turned it into a game for you to have fun. </br> </br> We will score your performance on every trial by giving you points. </br> </br> The goal is to have you hold down the space bar for as long as you saw the last disc lasted, but no longer! </br> </br> The closer you get to the right answer, the more points we will award you in that trial. </br> </br> But if you go over the actual duration you will not get any points on that trial. So, you need to be as accurate as possible without going over to earn the max. . . </br> </br> Each trial will be for 10 points. There are about 120 trials. </br> </br> If you collect a total of'+'<strong>'+ ' 650 points out of 1200 by the end'+'</strong>'+', we will pay you'+'<strong>'+' 1.5 times the original credits you get for the experiment.'+'</strong>','Now get ready! </br> </br> This study should take about 20-30 minutes to complete — following which you will paste the unique code into the MTurk website to submit the hit. </br> </br> Please email us at visualthinkinglabjhu@gmail.com and let us know if you have any problems or confusion while completing this HIT'];
+    $("#std,#oddBall,#redBall,#stdFeedback").hide();
+    $("#rewardCounter").hide();   
+
+    // ======================== FISHER-YATES/KNUTH SHUFFLE ======================= //
+    // Randomized oddball disc duration array and Knuth shuffle
+    function shuffle(arguments) {
+      var i = arguments[0].length;
+      if (i == 0)
+        return false;
+      else {
+        while (--i) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tempi1 = arguments[0][i];
+          var tempj1 = arguments[0][j];
+          var tempi2 = arguments[1][i];
+          var tempj2 = arguments[1][j];
+          arguments[0][i] = tempj1;
+          arguments[0][j] = tempi1;
+          arguments[1][i] = tempj2;
+          arguments[1][j] = tempi2;
+        }
+      }
+        return arguments
+    }
+
+    // ======================== GET BROWSER ======================= //
+    // Get browser (credit to Nimesh and other users of StackOverflow)
+
+    function getBrowser() {
+      if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf("OPR")) != -1) {
+        return "Opera";
+      } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+        return "Chrome";
+      } else if (navigator.userAgent.indexOf("Safari") != -1) {
+        return "Safari";
+      } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+        return "Firefox";
+      } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) {
+        // If IE > 10
+        return "IE";
+      } else {
+        return "Unknown";
+      }
+    }
+
+    // ======================== GET AMAZON MTURK WORKER ID ======================= //
+    // Get inferred subject ID from URL (credit to Eyal Peer)
+
+    function getSubjectID() {
+      var paramstr = window.location.search.substring(1);
+      var parampairs = paramstr.split("&");
+      for (i in parampairs) {
+        var pair = parampairs[i].split("=");
+        if (pair[0] == "workerId") {
+          return pair[1];
+        }
+      }
+    }
+
+    // ======================== ENDPAGE ======================= //
+
+    function showEndPage() {
+      $("#debrief").show()
+      $("#instructions").hide()    
+      $("#endButton").attr("onclick", "postData()");
+      $("#endButton").html("Submit");
+    }
+
+    // ======================== POST DATA TO SERVER ======================= //
+
+    function postData() {
+      // update final participant stats in last trial of response
+      $("#debrief").hide()
+      feedback = $("#feedbackBox").val();
+      endTime = new Date();
+      window.frame[window.frame.length - 1].feedback = feedback;
+      window.frame[window.frame.length - 1].endTime = endTime;
+      // Collect responses into JSON / csv file
+      var dataString = JSON.stringify(window.frame);
+      // post response to server
+      $.post("logTrial.py", {
+        subjectID: window.subjectID,
+        dataString: dataString
+      });
+      $("#instructions").show();    
+      $("#instructions").text("Thank you — please copy and enter the following code into the HIT: ADI29JF39");
+    }
+
+    // ======================== TRIAL GENERATOR ======================= //
+    // Generates each experiment after looping through 54 oddballs, 7-12 standard discs and ending with 3 discs.
+    function trialGenerator() {
+      var trialInfo = [];
+      var oddBag = [];
+      var oddType = [];
+      var startTime = new Date();
+      var oddBallDurations = [750, 825, 900, 975, 1050, 1125, 1250, 1375, 1450, 1525];
+      var oddBallTypes = ["odd", "stdFeedback", "stdFeedback", "red"];
+      var nreps = 3;
+      for (reps = 0; reps < nreps; reps++) { 
+          for(i=0; i<oddBallTypes.length; i++){ 
+              oddBag=oddBag.concat(oddBallDurations); 
+              temp=[];
+              for(j=0; j<oddBallDurations.length; j++){ 
+                  temp=temp.concat(oddBallTypes[i]); 
+              } 
+              oddType=oddType.concat(temp) 
+          }
+      }
+      temp2 = shuffle([oddBag,oddType]);      
+      oddBag = temp2[0];
+      oddType = temp2[1];     
+      var oddBallIndex;
+      for (oddBallIndex = 0; oddBallIndex < oddBag.length; oddBallIndex++) {
+        var stdNumber = 3 //(Math.floor(Math.random() * (13 - 7)) + 7); // Between 7-12 regular discs
+        for (stdCount = 0; stdCount < stdNumber; stdCount++) {
+          var isi = 1000 //Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "std",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
+          });
+        }
+        if (oddType[oddBallIndex] == "odd") {
+          // Looming black oddball
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "odd",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
+          });
+        } else if (oddType[oddBallIndex] == "red") {
+          // Stationary red oddball
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "red",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
+          });
+        } else {
+          // Standard
+          var isi = 1000//Math.floor(Math.random() * (1050 - 950) + 950);
+          trialInfo.push({
+            "type": "stdFeedback",
+            "duration": oddBag[oddBallIndex],
+            "isi": isi,
+            "judgment": "null",
+            "browser": window.browser,
+            "subjectID": window.subjectID,
+            "startTime": startTime,
+            "endTime": "null",
+            "feedback": "null",
+            "currentReward":"null",
+            "totalReward":"null"  
+          });
+        }
+      }
+      return trialInfo;
+    }
+
+    // ======================== TRIAL GENERATION ======================= //
+
+    var browser = getBrowser();
+    var subjectID = getSubjectID()
+    var frame = trialGenerator();
+    console.log("frame length :",frame.length)
+    var loop_active = true;
+    var loop_break = false
+    var responseTimeStamp = 3;
+    var counter = 0;
+    var rewardCounter = 0;  
+
+    // ======================== Instructions ======================= //
+    $("#previous,#next").show(); 
+    $("#stdDemo").hide();  
+    $("#scroll").hide();  
+    var cp = 0;  
+    
+    $(document).ready(function(){
+    $("instructions-start").scroll();
+    });  
+    function shw_cp(cp){
+	console.log(instructions[cp])
+	document.getElementById("p1").innerHTML = instructions[cp]
+    }
+
+    function next(){
+        cp++
+     if (cp <= instructions.length-1){
+         if(cp ==instructions.length-1){$("#next").text("Begin Experiment!")}
+        shw_cp(cp)
+        $("#scroll").hide(); 
+        show_feedback = false; 
+         if (instructions[cp].includes("In each trial, you will see a disc appear on the screen and then disappear")){
+             show_demo=true;
+             show_sequence = false;
+             show_feedback = false;
+         }else if(instructions[cp].includes("there will be a sequence of three such discs")){
+             show_demo = false;
+             show_sequence = true;
+             show_feedback = false;
+         }else if(instructions[cp].includes("Upon pressing the space bar, sometimes another disc will appear on the screen.")){
+             show_demo = false;
+             show_sequence = false;
+             show_feedback = true;
+         }else if(instructions[cp].includes("We really want you to be as accurate as you can")){
+             $("#scroll").show();
+         }
+     }else {
+         cp = cp-1
+         $("#previous,#next,#p1,#instructions").hide();
+         $(".outer,img").remove();
+         ballAnimation(frame,counter)}
+    }
+
+    function previous(){
+        cp--
+     if (cp >= 0){
+        shw_cp(cp)
+         show_feedback = false;
+         $("#scroll").hide();
+        $("#next").text("Next \u00bb")
+        if (instructions[cp].includes("In each trial, you will see a disc appear on the screen and then disappear")){
+            show_demo=true;
+            show_feedback = false;
+            show_sequence = false;
+         }else if(instructions[cp].includes("there will be a sequence of three such discs")){
+             show_demo = false;
+             show_sequence = true;
+             show_feedback = false;
+             
+         }else if(instructions[cp].includes("Upon pressing the space bar, another disc will appear on the screen.")){
+             show_demo = false;
+             show_sequence = false;
+             show_feedback = true;
+         }else if(instructions[cp].includes("We really want you to be as accurate as you can")){
+             $("#scroll").show();
+         }
+     }else {cp=0}
+    }  
+
+    
+    var output = document.getElementById('output'),
+    pressed = {};
+
+    window.onkeydown = function(e) {
+        if ( pressed[e.which] ) return;
+            if(e.keyCode == 32 && show_feedback) {
+            pressed[e.which] = e.timeStamp;
+            $("#p5").hide();
+            $(".outer").hide();
+            $("#std,#oddBall,#redBall,#stdFeedback").hide();
+            setTimeout(function() {
+                    $("#stdFeedback").show();
+                },0);
+            setTimeout(function() {
+                $("#stdFeedback").hide();
+            }, 900);
+            
+        }else if(!window.loop_active && !window.loop_break) {
+            pressed[e.which] = e.timeStamp;
+            $("#p5").hide();
+            window.loop_active=true;
+            frameWindow = frame[window.counter];
+            
+            if (frameWindow["type"] == "odd") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+                setTimeout(function() {
+                    $("#oddBall").show();
+                },0);
+            var expansion = String(0.25*frameWindow["duration"]);
+            console.log(window.counter)
+            console.log(window.responseTimeStamp)
+            $("#oddBall").animate({
+                height: expansion,
+                width: expansion
+            }, frameWindow["duration"], "linear")
+            setTimeout(function() {
+                $("#oddBall").hide();
+            }, frameWindow["duration"]);
+            console.log($("#oddBall").height());
+            
+
+            } else if (frameWindow["type"] == "red") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                console.log(window.counter)
+                console.log(window.responseTimeStamp)
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+//                setTimeout(function() {
+//                    $("#redBall").show();
+//                }, 0);
+//                setTimeout(function() {
+//                    $("#redBall").hide();
+//                }, frameWindow["duration"]);
+
+            } else if (frameWindow["type"] == "stdFeedback") {
+                window.responseTimeStamp = window.counter;
+                window.counter++;
+                console.log(window.counter)
+                console.log(window.responseTimeStamp)
+                $("#std,#oddBall,#redBall,#stdFeedback").hide();
+                setTimeout(function() {
+                    $("#stdFeedback").show();
+                }, 0);
+                setTimeout(function() {
+                    $("#stdFeedback").hide();
+                }, frameWindow["duration"]);
+
+
+            }
+        }
+        
+    };
+      
+    window.onkeyup = function(e) {
+        if ( !pressed[e.which] ) return; 
+        if(e.keyCode == 32 && show_feedback){   
+        $("#std,#oddBall,#redBall,#stdFeedback").hide();
+
+        var duration = ( e.timeStamp - pressed[e.which] );
+        //output.innerHTML += '<p>Key ' + e.which  + ' was pressed for ' + duration + ' seconds</p>';
+        pressed[e.which] = 0;
+        difference = Math.abs(duration - 900)/1000
+        var currentReward;
+        currentReward = Math.pow(Math.E, -difference*2).toFixed(2)*10
+        if (duration <= 900){
+            $("#p5").text("You earned " + currentReward.toFixed(2) + " out of 10 points in this round");
+            $("#p5").show();
+            setTimeout(function() {
+                $("#p5").hide();
+                $(".outer").show();
+            }, 1000);
+        }else{
+            $("#p5").text("Your response exceed the actual time");
+            $("#p5").show();
+            setTimeout(function() {
+                $("#p5").hide();
+                $(".outer").show();
+            }, 1000);
+            
+        }
+        }else if(window.counter < window.frame.length+1){
+        console.log(window.counter);
+        $("#std,#oddBall,#redBall,#stdFeedback").hide();
+        frameWindow = frame[window.counter-1];
+        console.log(frameWindow);
+
+        var duration = ( e.timeStamp - pressed[e.which] );
+        //output.innerHTML += '<p>Key ' + e.which  + ' was pressed for ' + duration + ' seconds</p>';
+        pressed[e.which] = 0;
+        window.frame[window.responseTimeStamp]["judgment"] = duration/1000;
+        difference = Math.abs(duration - frameWindow["duration"])/1000
+        var currentReward;
+        currentReward = Math.pow(Math.E, -difference*2).toFixed(2)*10
+        if (duration <= frameWindow["duration"]){
+            $("#p5").text("You earned " + currentReward.toFixed(2) + " out of 10 points in this round");
+            window.rewardCounter += currentReward;
+            frame[window.counter-1]["judgment"]=duration;
+            frame[window.counter-1]["currentReward"] = currentReward.toFixed(2);
+            frame[window.counter-1]["totalReward"] = window.rewardCounter.toFixed(2);
+            $("#rewardCounter").text("Total points "+window.rewardCounter.toFixed(2));
+            $("#p5").show();
+            setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, 500+frameWindow["isi"]);
+        }else{
+            $("#p5").text("Your response exceed the actual time");
+            $("#p5").show();
+            frame[window.counter-1]["judgment"]=duration;
+            frame[window.counter-1]["currentReward"] = currentReward.toFixed(2);
+            frame[window.counter-1]["totalReward"] = window.rewardCounter.toFixed(2);
+            setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, 500+frameWindow["isi"]);
+            
+        }
+        
+        if(window.loop_break){
+          console.log("The End!")
+          $("#p5").hide();
+          showEndPage();
+          $("#topDisplay,#feedbackBox,#endButton,#feedback").show();
+          $("#endButton").attr("onclick", "postData()");
+          $("#endButton").html("Submit");
+        }
+        }else{
+                setTimeout(function() {
+                ballAnimation(frame, window.counter);
+            }, frameWindow["isi"]);
+        }
+    };
+  
+      
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Code for demo %%%%%%%%%%%%%%%%%%%%%%%%%%%%//      
+      
+    var show_demo = false;  
+    var show_sequence = false;  
+    var show_feedback = false;  
+    $(document).keyup(function(e) {
+     console.log(e.keyCode);
+      if (e.keyCode == 68 && show_demo) { 
+          $(".outer").hide();
+          $("#std").show();
+          setTimeout(function() {
+                $("#std").hide();
+                $(".outer").show();
+            }, 900);
+          }
+      })
+      
+       $(document).keyup(function(e) {
+     console.log(e.keyCode);
+      if (e.keyCode == 83 && show_sequence) { 
+          $(".outer").hide();
+          $("#std").show();
+          setTimeout(function() {
+                $("#std").hide();
+            }, 900);
+        setTimeout(function() {
+                $("#std").show();
+            }, 900+1000);
+        setTimeout(function() {
+                $("#std").hide();
+            }, 900+1000+900); 
+        setTimeout(function() {
+                $("#std").show();
+            }, 900+1000+900+1000); 
+        setTimeout(function() {
+                $("#std").hide();
+                $(".outer").show();
+            }, 900+1000+900+1000+900); 
+          }
+      }) 
+      
+
+
+    function download(content, fileName, contentType) {
+        var a = document.createElement("a");
+        var file = new Blob([content], {type: contentType});
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+    }  
+      
+    var ballAnimation = function(frame, counter) {
+      var frameWindow;
+      if (window.counter < window.frame.length) {
+        frameWindow = frame[window.counter];
+        if (frameWindow["type"] == "std") {
+          $("#oddBall").height(1).width(1);
+          $("#oddBall,#redBall,#stdFeedback,#p5").hide();
+          $("#rewardCounter").show();    
+            $("#p5").text("Press and hold SPACEBAR to report the duration of the last stimulus");    
+          if (window.loop_active) {
+            window.counter++;
+            setTimeout(function() {
+              $("#std").show();
+            }, frameWindow["isi"]);
+            setTimeout(function() {
+              $("#std").hide();
+            }, frameWindow["isi"] + frameWindow["duration"]);
+            setTimeout(function() {
+              ballAnimation(frame, window.counter);
+            }, frameWindow["isi"] + frameWindow["duration"])
+          } else {
+                setTimeout(function() {
+                  $("#p5").show();window.loop_active = false;
+              }, 500);
+          }
+        }else {
+                setTimeout(function() {
+                  $("#p5").show(); window.loop_active = false;
+              }, 500);
+          } 
+      } else {
+          console.log("The End!")
+          $("#p5").hide();
+          showEndPage();
+          $("#topDisplay,#feedbackBox,#endButton,#feedback").show();
+          $("#endButton").attr("onclick", "postData()");
+          $("#endButton").html("Submit");
+          JSONObj = JSON.stringify(frame);
+          download(JSONObj, "Tachypsychia_exp2_data.json", "json");          
+      }
+    }
+
+    // ======================== MAIN BLOCK ======================= //
+    
+    $("#p1").text(instructions[0]);
+    $("#p1").show();  
+    // Carries out each experiment trial via animations
+    $("#feedbackBox,#p5,#debrief,#instructions").hide();
+      
+  </script>
+</body>
+
+</html>
