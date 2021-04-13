@@ -69,6 +69,15 @@ p {
   margin: 275px auto;
 }
 
+#p6 {
+  text-align: center;
+  font-size: 14pt;    
+  border: 5px solid white;
+  width: 400px;
+  height: 50px;
+  margin: 275px auto;
+}
+
 .outer {
   display: table;
   position: absolute;
@@ -94,7 +103,7 @@ p {
   /*border: 5px solid white;*/
   padding: 10px 20px 10px;
   width: 900px;
-  height: 200px;
+  height: 300px;
   top: 50%;
   left: 50%;
   margin: 0 auto;
