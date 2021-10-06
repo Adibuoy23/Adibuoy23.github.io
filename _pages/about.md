@@ -6,7 +6,7 @@ comments: true
 author_profile: true
 ---
  
-I am a postdoc at the Center for Mind & Brain located in the University of California Davis campus. I am part of the Visual Cognition Lab directed by [Dr. John Henderson] (https://viscoglab.ucdavis.edu). My current work explores and characterizes the mutual relationship between semantics of real world scenes and our eye movements. I use eye tracking, computational modelling and behavioral analysis to address these issues. I am interested in a variety of topics at the intersection of vision, language and thought. 
+I am a postdoc at the Center for Mind & Brain located in the University of California Davis campus. I am part of the Visual Cognition Lab directed by [Dr. John Henderson](https://viscoglab.ucdavis.edu). My current work explores and characterizes the mutual relationship between semantics of real world scenes and our eye movements. I use eye tracking, computational modelling and behavioral analysis to address these issues. I am interested in a variety of topics at the intersection of vision, language and thought. 
 
 My research seeks to understand how visual processing unfolds over time. A great deal of vision research deals with punctate events, short bursts of cognitive effort, and recognition problems with a single end point as the desired solution. But much of what the visual system allows us to do involves sustained mental effort, goals that develop over time, and a sense of narrative that can be related to linguistic representations. I am interested in characterizing how visual processing unfolds over multiple time scales, and how it supplies us with information beyond object and feature recognition. 
 
