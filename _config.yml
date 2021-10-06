@@ -1,7 +1,7 @@
 # Site Settings
 theme                    : minimal-mistakes-jekyll
 locale                   : "en"
-title                    : "Aditya Upadhyayula, PhD"
+title                    : "Aditya Upadhyayula"
 title_separator          : "-"
 name                     : "Shanmukha Aditya Upadhyayula"
 description              : "Powered by Jekyll and Github"
@@ -71,7 +71,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Aditya Upadhyayula"
+  name             : "Aditya Upadhyayula, PhD"
   avatar           : "Adi.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Center for Mind & Brain at <br/>University of California, Davis. <br/> <br/>(He / Him)"
   location         : "Davis, CA"
