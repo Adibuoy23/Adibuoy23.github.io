@@ -8,14 +8,14 @@ author_profile: true
 
 I am a postdoc at Washington University, St. Louis. I work with the [Dynamic Cognition Lab](https://dcl.wustl.edu) headed by Dr. Jeffrey M. Zacks, and the [Complex Memory Lab](https://sites.wustl.edu/complexmemlab/) headed by Dr. Zacharaiah M. Reagh. Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
 
-I am interested in all things cognition. My research can be broadly categorized into three branches. One aspect of my research focuses on visual cognition. Particularly, I have worked on characterizing temporal aspects of vision, attentional limitations during tracking, and the role of top-down information during movie watching.
+I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three branches. One aspect of my research focuses on visual cognition. Particularly, I have worked on characterizing temporal aspects of vision, attentional limitations during tracking, and the role of top-down information during movie watching.
 
 In other line of work, I investigate whether we use grammatical systems to process non-linguistic visual narratives. Particularly, I use computational psycholinguistics and behavioral data on comics to study this question.
 
-The thrid line of my work explores how we represent, remember and process complex narratives such as movies. To study this, I have been using a novel storyboard paradigm - where the participants are instructed to identify meaningful instants when viewing movies.
+The third line of my work explores how we represent, remember and process complex narratives such as movies. To study this, I have been using a novel storyboard paradigm - where the participants are instructed to identify meaningful instants when viewing movies.
 
 
-Please check out the publications and the blogs page to know more. Feel free to reach out if you have any questions regarding my research. I am currently located at
+Please check out the publications and the blogs page to know more about these topics. Feel free to reach out if you have any questions regarding my research. I am currently located at
 
 Somers Family Hall 402,
 Washington University
