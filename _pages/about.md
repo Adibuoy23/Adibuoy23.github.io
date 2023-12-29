@@ -6,7 +6,7 @@ comments: true
 author_profile: true
 ---
 
-I am a postdoc at Washington University, St. Louis. I work with the [Dynamic Cognition Lab](https://dcl.wustl.edu) headed by Dr. Jeffrey M. Zacks, and the [Complex Memory Lab](https://sites.wustl.edu/complexmemlab/) headed by Dr. Zacharaiah M. Reagh. Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
+I am a postdoc at Washington University, St. Louis. I work with the Dynamic Cognition Lab headed by [Dr. Jeffrey M. Zacks](https://dcl.wustl.edu), and the Complex Memory Lab headed by [Dr. Zacharaiah M. Reagh](https://sites.wustl.edu/complexmemlab/). Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
 
 I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three branches. One aspect of my research focuses on visual cognition. Particularly, I have worked on characterizing temporal aspects of vision, attentional limitations during tracking, and the role of top-down information during movie watching.
 
@@ -17,11 +17,13 @@ The third line of my work explores how we represent, remember and process comple
 
 Please check out the publications and the blogs page to know more about these topics. Feel free to reach out if you have any questions regarding my research. I am currently located at
 
+```
 Somers Family Hall 402,
-Washington University
-Campus Box 1125
-One Brookings Dr
-Saint Louis, MO 63130-4899
+Washington University,
+Campus Box 1125,
+One Brookings Dr,
+St. Louis, MO 63130-4899
+```
 
 or email me at `aditya.usa8@gmail.com`
 
