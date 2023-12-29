@@ -73,8 +73,8 @@ analytics:
 author:
   name             : "Aditya Upadhyayula, PhD"
   avatar           : "Adi.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Center for Mind & Brain at <br/>University of California, Davis. <br/> <br/>(He / Him)"
-  location         : "Davis, CA"
+  bio              : "Department of Psychological & Brain Sciences <br/>Washington University in St. Louis. <br/> <br/>(He / Him)"
+  location         : "St. Louis, MO"
   email            : "aditya.usa8@gmail.com"
   uri              :
   bitbucket        :
@@ -167,7 +167,7 @@ sass:
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: _pages/page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 

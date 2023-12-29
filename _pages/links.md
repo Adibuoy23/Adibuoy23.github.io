@@ -14,3 +14,14 @@ author_profile: true
 
 [Click here for experiment 4](https://adibuoy23.github.io/others/online_experiments/Tachypsychia-experiment4.html)
 
+
+## Experiments on Spatiotemporal disruptions during film viewing - flicker paradigm
+
+
+[Click here for a demo](https://adibuoy23.github.io/temporal_change_blindness_longer_shifts/video_cb_flicker_paradigm_longer_shifts.html)
+
+
+## Event segmentation paradigm
+
+
+[Click here for a demo](https://adibuoy23.github.io/event_segmentation/event_segmentation_paradigm.html)

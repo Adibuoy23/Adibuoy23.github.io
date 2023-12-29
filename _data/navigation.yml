@@ -13,6 +13,8 @@ main:
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
+  - title: "Publications"
+    url: /publications/
   - title: "CV"
     url: /CV/
   - title: "External Links"

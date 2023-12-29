@@ -5,20 +5,23 @@ permalink: /About/
 comments: true
 author_profile: true
 ---
- 
-I am a postdoc at the Center for Mind & Brain located in the University of California Davis campus. I am part of the Visual Cognition Lab directed by [Dr. John Henderson](https://viscoglab.ucdavis.edu). My current work explores and characterizes the mutual relationship between semantics of real world scenes and our eye movements. I use eye tracking, computational modelling and behavioral analysis to address these issues. I am interested in a variety of topics at the intersection of vision, language and thought. 
 
-My research seeks to understand how visual processing unfolds over time. A great deal of vision research deals with punctate events, short bursts of cognitive effort, and recognition problems with a single end point as the desired solution. But much of what the visual system allows us to do involves sustained mental effort, goals that develop over time, and a sense of narrative that can be related to linguistic representations. I am interested in characterizing how visual processing unfolds over multiple time scales, and how it supplies us with information beyond object and feature recognition. 
+I am a postdoc at Washington University, St. Louis. I work with the [Dynamic Cognition Lab](https://dcl.wustl.edu) headed by Dr. Jeffrey M. Zacks, and the [Complex Memory Lab](https://sites.wustl.edu/complexmemlab/) headed by Dr. Zacharaiah M. Reagh. Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
 
-During my PhD (advised by [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/)), I have pursued a variety of projects that were looking at visual processing at different time scales and in various contexts. A number of themes arise throughout these projects, including the consequences and management of our foveated visual system, the perception of duration itself, and the role of memory in temporally unfolding cognition. Commensurate with the scope of these projects I have used a range of methods including psychophysics, computational modelling, eye tracking, and psycholinguistics.
+I am interested in all things cognition. My research can be broadly categorized into three branches. One aspect of my research focuses on visual cognition. Particularly, I have worked on characterizing temporal aspects of vision, attentional limitations during tracking, and the role of top-down information during movie watching.
 
-I am very interested in building computational models to study how human cognition works. I try to keep up with the research in Machine Learning / Deep Learning community to this end. Some of the issues that I deeply care about are the symbolic vs. distributed representations, and their role in cognition.
+In other line of work, I investigate whether we use grammatical systems to process non-linguistic visual narratives. Particularly, I use computational psycholinguistics and behavioral data on comics to study this question.
 
-Feel free to reach out if you have any questions regarding my research. I am currently located at
+The thrid line of my work explores how we represent, remember and process complex narratives such as movies. To study this, I have been using a novel storyboard paradigm - where the participants are instructed to identify meaningful instants when viewing movies.
 
-Center for Mind & Brain - 171,
-267 Cousteau Pl,
-Davis - CA, 95618
+
+Please check out the publications and the blogs page to know more. Feel free to reach out if you have any questions regarding my research. I am currently located at
+
+Somers Family Hall 402,
+Washington University
+Campus Box 1125
+One Brookings Dr
+Saint Louis, MO 63130-4899
 
 or email me at `aditya.usa8@gmail.com`
 
