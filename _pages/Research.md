@@ -10,7 +10,7 @@ author_profile: true
 # How do we process time?
 `In collaboration with : Jon Flombaum, PhD & Ian Phillips, PhD`
 
-When we think about time we conceptualize it in terms of discrete units, or moments in time. But what are these moments? How long are they? What do they contain? How are these moments accumulated to give rise to a sense of duration? These are the questions I am currently exploring in my dissertation
+When we think about time we conceptualize it in terms of discrete units, or moments in time. But what are these moments? How long are they? What do they contain? How are these moments accumulated to give rise to a sense of duration? These are the questions I explored in my dissertation
 
 ### What are the constituents of a moment of our visual experience?
 
