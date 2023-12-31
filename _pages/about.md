@@ -8,7 +8,7 @@ author_profile: true
 
 I am a postdoc at Washington University, St. Louis. I work with the Dynamic Cognition Lab headed by [Dr. Jeffrey M. Zacks](https://dcl.wustl.edu), and the Complex Memory Lab headed by [Dr. Zacharaiah M. Reagh](https://sites.wustl.edu/complexmemlab/). Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
 
-I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three branches. One line of my research focuses on visual cognition. Particularly, I have worked on characterizing temporal aspects of vision, attentional limitations during tracking, saccade and flicker contingent disruptions during movie watching.
+I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three branches. One line of my research focuses on on characterizing temporal aspects of vision, attentional limitations during tracking, saccade and flicker contingent disruptions during movie watching.
 
 In another line of work, I investigate whether we use grammatical systems to process non-linguistic visual narratives. Particularly, I use computational psycholinguistics and behavioral data on comics to study this question.
 
