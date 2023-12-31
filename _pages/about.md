@@ -8,11 +8,11 @@ author_profile: true
 
 I am a postdoc at Washington University, St. Louis. I work with the Dynamic Cognition Lab headed by [Dr. Jeffrey M. Zacks](https://dcl.wustl.edu), and the Complex Memory Lab headed by [Dr. Zacharaiah M. Reagh](https://sites.wustl.edu/complexmemlab/). Prior to this, I was a postdoc with the Visual Cognition Lab at UC Davis headed by [Dr. John M. Henderson](https://viscoglab.ucdavis.edu/). I got my PhD from Johns Hopkins University, where I worked with [Dr. Jonathan Flombaum](https://pbs.jhu.edu/directory/jonathan-flombaum/).
 
-I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three branches. One line of my research focuses on on characterizing temporal aspects of vision, attentional limitations during tracking, saccade and flicker contingent disruptions during movie watching.
+I am interested in all things cognition. My research mainly deals with how visual processing unfolds over time. It can be broadly categorized into three arcs. One line of my research focuses on on characterizing temporal aspects of vision. Particularly, I have worked on how we perceive time, how attentional limitations affect tracking performance, and the effects of saccade and flicker contingent disruptions during movie watching.
 
-In another line of work, I investigate whether we use grammatical systems to process non-linguistic visual narratives. Particularly, I use computational psycholinguistics and behavioral data on comics to study this question.
+In another line of work, I have been working on characterizing the role of grammatical systems in cognition with a keen interest on whether/how they relate to the language of thought. Here, I study comic strips that do not contain any linguistic information to see whether their comprehension involves a grammar. I address this question by building computational models inspired from computational psycholinguistics and event segmentation.
 
-The third line of my work explores how we represent, remember and process complex narratives such as movies. To study this, I am using a novel storyboard paradigm - where the participants are instructed to identify meaningful instants when viewing movies.
+Finally, the third line of work investigates how we represent, process, and remember complex narratives such as movies. I study using story telling paradigms, and event segmentation theory.
 
 
 Please check out the publications and the blogs page to know more about these topics. Feel free to reach out if you have any questions regarding my research. I am currently located at
