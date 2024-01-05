@@ -8,7 +8,7 @@ author_profile: true
 
 **Upadhyayula A.**., & Neil Cohn. (***Under Revision***). A hierarchical grammar explains segmentation in visual narratives. [Watch the talk](https://www.youtube.com/watch?v=eEBSmQwxVmk)
 
-**Upadhyayula A.**., & John M Henderson. (2024) Spatiotemporal jump detections during continuous film viewing: Insights from a flicker paradigm. Attention, Perception & Psychophysics. [Materials](https://osf.io/296jh/) [Link to the paper](https://link.springer.com/article/10.3758/s13414-023-02837-8)
+**Upadhyayula A.**., & John M Henderson. (2024) Spatiotemporal jump detections during continuous film viewing: Insights from a flicker paradigm. Attention, Perception & Psychophysics. [Materials](https://osf.io/296jh/) [Read the paper](https://rdcu.be/du6GP)
      
 **Upadhyayula A.**., & Henderson, J. M. (2023). Spatiotemporal jump detection during continuous film viewing. Journal of Vision, 23(2), 13-13. [Materials](https://osf.io/j95z3/) [Read the paper](https://adibuoy23.github.io/others/Spatiotemporal_saccade_paper.pdf)
      
