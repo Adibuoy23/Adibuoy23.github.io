@@ -19,7 +19,7 @@ author_profile: true
 
 ## In preparation
 
-**Upadhyayula A.**., John M. Henderson, Jeffrey M. Zacks & Zachariah M. Reagh. (***In prep***). Intersubject neural similarity and pattern reinstatement during recall are enhanced at meaningful moments during film viewing.
+**Upadhyayula A.**., Jeffrey M. Zacks, John M. Henderson, & Zachariah M. Reagh. (***In prep***). Intersubject neural similarity and pattern reinstatement during recall are enhanced at meaningful moments during film viewing.
 
 
 **Upadhyayula A.**<sup><b>* </b></sup>, Alan Lu<sup><b>* </b></sup> & John M Henderson. (***In prep***) Meaning maps predict reaction time in change blindness paradigm
