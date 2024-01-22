@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": ".Update?",
-        "excerpt":"After a long hiatus, I was finally able to update my webpage. Few things happened in the meantime: Our paper titled “Eccentricity advances arrival to perception” got out @ JEP:G. Here, we investigated how a visual moment is perceived in time. We found that two objectively simultaneously are not perceived...","categories": [],
+        "excerpt":"After a long hiatus, I was finally able to update my webpage. Few things happened in the meantime: Our paper titled “Eccentricity advances arrival to perception” got out @ JEP:G. Here, we investigated how a visual moment is perceived in time. We found that two objectively simultaneous instants are not...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/update/",
         "teaser": null

@@ -1,5 +1,5 @@
 # Site Settings
-theme                    : github-pages
+theme                    : "github-pages"
 locale                   : "en"
 title                    : "Aditya Upadhyayula"
 title_separator          : "-"
