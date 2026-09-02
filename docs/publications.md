@@ -120,6 +120,7 @@ vision and language.
 **Upadhyayula, A.**\*, Bailey, H.\*, <u>Su, S. (X.)</u>, Flores, S., Reagh, Z. M., & Zacks,
 J. M. (in preparation). Behavioral and neural correlates of situation model updating in the
 aging brain.
+[:material-chart-line: Interactive results](https://adibuoy23.github.io/situation_model_updating/results/)
 </div>
 
 </section>
