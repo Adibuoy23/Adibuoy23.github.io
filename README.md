@@ -240,3 +240,6 @@ git push
 Then watch it: <https://github.com/Adibuoy23/Adibuoy23.github.io/actions>. A deploy takes
 one to two minutes. If the build fails it is nearly always a broken link caught by
 `--strict`; run the build locally to see the same error.
+
+The workflow builds from `master` and publishes to GitHub Pages. There is no `gh-deploy`
+step to run — pushing is the whole process.
