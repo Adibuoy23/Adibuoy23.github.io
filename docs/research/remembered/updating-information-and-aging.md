@@ -14,6 +14,9 @@ that changed, or something that did not — tells us how much of the picture was
 Both groups were equally accurate, so the difference is in how quickly they could reach the
 information, not in whether they still had it.
 
+Activity in the default mode network echoes this: as older adults read through the shifts,
+their responses are more sustained than younger adults'. More on this coming soon...
+
 *Upadhyayula, Bailey, Su, Flores, Reagh & Zacks (in preparation).*
 [:material-chart-line: Interactive results](https://adibuoy23.github.io/situation_model_updating/results/)
 
