@@ -27,8 +27,9 @@ frames matter.
 [:material-play-circle: Try the storyboard paradigm](https://adibuoy23.github.io/event_representations/event_representation_paradigm.html)
 
 Used in *Meaningful moments during film viewing are represented and remembered similarly
-across participants* ([preprint](https://doi.org/10.1101/2025.08.30.673233)). See
-[How is information remembered?](../research/remembered/index.md) for what came out of it.
+across participants* ([preprint](https://doi.org/10.1101/2025.08.30.673233)).
+See [How is information remembered?](../research/remembered/index.md) and
+[How is information organized?](../research/organized/index.md) for what came out of it.
 
 ### Event segmentation paradigm
 
@@ -41,6 +42,8 @@ key moments are measured.
 Used in *Key moments and event boundaries in film comprehension and memory*
 ([preprint](https://osf.io/preprints/psyarxiv/wn4d5_v2) ·
 [data & code](https://osf.io/uzvgf/)).
+See [How is information remembered?](../research/remembered/index.md) and
+[How is information organized?](../research/organized/index.md) for what came out of it.
 
 ### Spatiotemporal disruptions during film viewing
 
