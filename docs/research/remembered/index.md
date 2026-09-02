@@ -20,7 +20,7 @@ comprehension. Explore more below:
     <span class="proj-card__thumb"><img src="../../assets/images/thumb-boundaries.png" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">Are key moments just event boundaries?</span>
-      <span class="proj-card__desc">No. And which moments get picked depends on when you ask: choosing in real time during a film gives a different set than choosing afterward — a hint that the unfolding narrative itself shapes what registers as important.</span>
+      <span class="proj-card__desc">Partly, but not entirely — and the usual comparison cannot tell, because construct and measurement method are confounded. We crossed key moments against event boundaries, and real-time button presses against retrospective frame selection.</span>
       <span class="proj-card__more">Read more →</span>
     </span>
   </a>
