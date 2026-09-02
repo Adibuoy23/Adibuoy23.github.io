@@ -1,20 +1,20 @@
 # How do we update information when comprehending narratives, and how does that change as we age?
 
-Reading a story means keeping a running picture of it in mind — who is there, where they
+Reading a story means keeping a running picture of it in mind: who is there, where they
 are, what is happening. When the story moves somewhere new, or a different character takes
 over, that picture has to change. Does only the changed part get replaced, or is the whole
 picture rebuilt?
 
 So we asked what happens when younger and older adults read stories that shift to a new
 place or a new character. We recorded their brain activity as they read, then showed them a
-phrase and asked whether it had been in the story. What that phrase relates to — the thing
-that changed, or something that did not — tells us how much of the picture was rebuilt.
+phrase and asked whether it had been in the story. What that phrase relates to, the thing
+that changed or something that did not, tells us how much of the picture was rebuilt.
 
-**Younger adults were slow only on what had changed** — suggesting they rebuild just the part
+**Younger adults were slow only on what had changed**, suggesting they rebuild just the part
 that moved and leave the rest of the picture intact. **Older adults were slow on everything**,
 suggesting they may be rebuilding all of it. Both groups were equally accurate, so this is
-about how quickly the information can be reached, not whether it survives — and it has real
-consequences for how we remember as we age.
+about how quickly the information can be reached rather than whether it survives, and it has
+real consequences for how we remember as we age.
 
 Activity in the default mode network echoes this behavioural pattern. More on this coming
 soon...
