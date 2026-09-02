@@ -28,7 +28,7 @@ comprehension. Explore more below:
     <span class="proj-card__thumb"><img src="../../assets/images/thumb-aging.png" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">How do we update information when comprehending narratives, and how does that change as we age?</span>
-      <span class="proj-card__desc">Readers construct situation models of the events described in a text and update these models at points of change. We evaluated age-related changes in situation model updating with fMRI in 20 young and 20 older adults…</span>
+      <span class="proj-card__desc">Reading a story means keeping a running model of it in your head. When the story shifts, do you swap out just the part that changed, or rebuild the whole thing? Younger and older adults answer differently.</span>
       <span class="proj-card__more">Read more →</span>
     </span>
   </a>
