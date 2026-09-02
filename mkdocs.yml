@@ -1,0 +1,101 @@
+site_name: Aditya Upadhyayula
+site_description: >-
+  Cognitive scientist studying how visual processing unfolds over time —
+  time perception, visual narratives, and event cognition.
+site_url: https://adibuoy23.github.io/
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.png
+  palette:
+    scheme: default
+    primary: white
+    accent: "#1E88E5"
+  font:
+    text: Hind
+    code: Fira Code
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - announce.dismiss
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - assets/publications.js
+  - assets/collapsible.js
+  - assets/video.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/adibuoy23.bsky.social
+      name: Bluesky
+    - icon: fontawesome/brands/github
+      link: https://github.com/Adibuoy23
+      name: GitHub
+    - icon: fontawesome/solid/envelope
+      link: mailto:shanmukha@wustl.edu
+      name: Email
+  generator: true
+
+copyright: Copyright &copy; Aditya Upadhyayula
+
+nav:
+  - Home: index.md
+  - Research:
+      - research/index.md
+      - How is information perceived?:
+          - research/perceived/index.md
+          - Why can we only track a few things at once?: research/perceived/why-can-we-only-track-a-few-things-at-once.md
+          - How do we experience the perception of now?: research/perceived/how-do-we-experience-the-perception-of-now.md
+          - How do we experience the passage of time?: research/perceived/how-do-we-experience-the-passage-of-time.md
+          - Predictive constraints on vision: research/perceived/predictive-constraints-on-vision.md
+          - What drives change blindness in naturalistic scenes?: research/perceived/what-drives-change-blindness-in-naturalistic-scenes.md
+          - Can eye movements tell us what a scene means?: research/perceived/can-eye-movements-tell-us-what-a-scene-means.md
+      - How is information remembered?:
+          - research/remembered/index.md
+          - How are continuous experiences represented and remembered in the brain?: research/remembered/how-are-experiences-represented-and-remembered.md
+          - Are key moments just event boundaries?: research/remembered/are-key-moments-just-event-boundaries.md
+          - How do we update information when comprehending narratives, and how does that change as we age?: research/remembered/updating-information-and-aging.md
+      - How is information organized?:
+          - research/organized/index.md
+          - Does visual narrative comprehension involve a grammar?: research/organized/visual-narrative-grammar.md
+          - What makes a moment key?: research/organized/what-makes-a-moment-key.md
+  - Publications: publications.md
+  - CV: cv.md
+  - Blog: blog/index.md
+  - Resources: resources/index.md

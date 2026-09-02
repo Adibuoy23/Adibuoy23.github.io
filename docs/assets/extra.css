@@ -1,0 +1,525 @@
+/* Accent, matching the reference site. A hex value in mkdocs.yml only sets the
+   data attribute; the variable has to be bound here for it to take effect. */
+:root {
+  --md-accent-fg-color: #1E88E5;
+  --md-accent-fg-color--transparent: rgba(30, 136, 229, 0.1);
+  --md-accent-bg-color: #fff;
+}
+
+/* Material binds --md-typeset-a-color on [data-md-color-primary=white], which
+   outranks :root — so the link colour has to be set at that specificity. */
+:root,
+[data-md-color-primary="white"] {
+  --md-typeset-a-color: #1E88E5;
+}
+
+/* Content column left at Material's default 61rem, matching the reference site. */
+
+/* Responsive embeds for the YouTube/Giphy iframes used across research pages. */
+.md-typeset iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 0.2rem;
+}
+
+/* Home page profile image */
+.md-typeset figure img {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Research figures: these are modest-resolution crops, so cap their display
+   width rather than letting them stretch across the content column. */
+.md-typeset .grid img,
+.md-typeset figure img,
+.md-typeset p > img {
+  max-width: min(100%, 34rem);
+  display: block;
+  margin: 0.6rem auto 0;
+  border-radius: 0.2rem;
+}
+
+/* Two-up figure rows. Scoped away from .grid.cards, whose cards must stretch
+   to a uniform height rather than be centred individually. */
+.md-typeset .grid:not(.cards) {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Card grids: equal height, equal width, aligned tops. */
+.md-typeset .grid.cards > ul {
+  align-items: stretch;
+  gap: 0.8rem;
+}
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+/* Push the trailing keyword line to the bottom so card feet line up. */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Paper credit lines under each research blurb */
+.md-typeset h3 + p + p em:first-child {
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---- Publications: theme filtering ---- */
+.pub-filter {
+  margin: 1.2rem 0 1.6rem;
+  padding: 0.8rem 1rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: var(--md-default-bg-color);
+}
+.pub-filter > p:first-child { margin: 0 0 0.6rem; }
+
+.pub-filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pub-chip {
+  font: inherit;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  transition: background-color 120ms, color 120ms, border-color 120ms;
+}
+.pub-chip:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.pub-chip.is-active {
+  background: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color, #fff);
+}
+
+.md-typeset .pub-count {
+  margin: 0.7rem 0 0;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .pub {
+  margin: 0 0 1.1rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset .pub > p { margin: 0; }
+
+.md-typeset .pub-tags {
+  margin: 0.35rem 0 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.pub-tag {
+  font: inherit;
+  font-size: 0.6rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+.pub-tag:hover { border-color: var(--md-accent-fg-color); color: var(--md-accent-fg-color); }
+.pub-tag.is-active {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+.md-typeset .pub-empty {
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---- Publication theme colors ----
+   One hue per theme, shared by the filter chip and the per-entry tag. Dark-mode
+   values are lightened so they keep contrast against the slate background. */
+.pub-chip[data-theme="perception"],       .pub-tag[data-theme="perception"]       { --pub-c: #2f66c9; }
+.pub-chip[data-theme="attention"],        .pub-tag[data-theme="attention"]        { --pub-c: #0b7d70; }
+.pub-chip[data-theme="memory"],           .pub-tag[data-theme="memory"]           { --pub-c: #6b45ad; }
+.pub-chip[data-theme="event-cognition"],  .pub-tag[data-theme="event-cognition"]  { --pub-c: #b25e12; }
+.pub-chip[data-theme="narrative"],        .pub-tag[data-theme="narrative"]        { --pub-c: #b3175a; }
+.pub-chip[data-theme="psycholinguistics"],.pub-tag[data-theme="psycholinguistics"]{ --pub-c: #43801f; }
+.pub-chip[data-theme="cognitive-aging"],  .pub-tag[data-theme="cognitive-aging"]  { --pub-c: #9c3b6b; }
+.pub-chip[data-theme="all"]               { --pub-c: var(--md-default-fg-color--light); }
+
+[data-md-color-scheme="slate"] {
+  --pub-perception: #7ba7f0;
+  --pub-attention: #45c4b2;
+  --pub-memory: #b79bec;
+  --pub-event: #e8a25a;
+  --pub-narrative: #f07ba6;
+  --pub-psycholx: #9cce70;
+  --pub-aging: #e79ac0;
+}
+[data-md-color-scheme="slate"] .pub-chip[data-theme="perception"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="perception"]        { --pub-c: var(--pub-perception); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="attention"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="attention"]         { --pub-c: var(--pub-attention); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="memory"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="memory"]            { --pub-c: var(--pub-memory); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="event-cognition"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="event-cognition"]   { --pub-c: var(--pub-event); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="narrative"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="narrative"]         { --pub-c: var(--pub-narrative); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="psycholinguistics"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="psycholinguistics"] { --pub-c: var(--pub-psycholx); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="cognitive-aging"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="cognitive-aging"]   { --pub-c: var(--pub-aging); }
+
+/* Resting state: colored text on a faint tint of the same hue. */
+.pub-chip,
+.pub-tag {
+  color: var(--pub-c, var(--md-default-fg-color--light));
+  border-color: color-mix(in srgb, var(--pub-c, currentColor) 40%, transparent);
+  background: color-mix(in srgb, var(--pub-c, currentColor) 8%, transparent);
+}
+
+.pub-chip:hover,
+.pub-tag:hover {
+  color: var(--pub-c, var(--md-default-fg-color));
+  border-color: var(--pub-c, currentColor);
+  background: color-mix(in srgb, var(--pub-c, currentColor) 16%, transparent);
+}
+
+/* Selected: solid fill, white text. */
+.pub-chip.is-active {
+  background: var(--pub-c);
+  border-color: var(--pub-c);
+  color: #fff;
+}
+[data-md-color-scheme="slate"] .pub-chip.is-active { color: #1b1b1f; }
+
+.pub-tag.is-active {
+  background: color-mix(in srgb, var(--pub-c) 22%, transparent);
+  border-color: var(--pub-c);
+  color: var(--pub-c);
+  font-weight: 700;
+}
+
+/* Match each entry's left rule to its first theme. */
+.md-typeset .pub[data-themes^="perception"]      { border-left-color: #2f66c9; }
+.md-typeset .pub[data-themes^="attention"]       { border-left-color: #0b7d70; }
+.md-typeset .pub[data-themes^="memory"]          { border-left-color: #6b45ad; }
+.md-typeset .pub[data-themes^="event-cognition"] { border-left-color: #b25e12; }
+.md-typeset .pub[data-themes^="narrative"]       { border-left-color: #b3175a; }
+
+/* ---- Collapsible research sections ---- */
+.md-typeset h2.sec-toggle {
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.6rem;
+  transition: color 120ms;
+}
+.md-typeset h2.sec-toggle:hover { color: var(--md-accent-fg-color); }
+
+/* Chevron, rotated when the section is folded shut. */
+.md-typeset h2.sec-toggle::after {
+  content: "";
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.45;
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 160ms ease, opacity 120ms;
+}
+.md-typeset h2.sec-toggle:hover::after { opacity: 1; }
+.md-typeset h2.sec-toggle.is-collapsed::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.md-typeset h2.sec-toggle:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 3px;
+  border-radius: 0.1rem;
+}
+
+.md-typeset .sec-body[hidden] { display: none; }
+
+.md-typeset .sec-controls {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1.2rem 0 0;
+}
+.sec-control {
+  font: inherit;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 1rem;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+.sec-control:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* The page title toggles its own intro block. */
+.md-typeset h1.sec-toggle {
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.8rem;
+}
+.md-typeset h1.sec-toggle::after {
+  content: "";
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.35;
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 160ms ease, opacity 120ms;
+}
+.md-typeset h1.sec-toggle:hover::after { opacity: 0.8; }
+.md-typeset h1.sec-toggle.is-collapsed::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Both card grids on this site hold exactly three cards. Given room, lay them
+   out as one row so no card is orphaned onto a line of its own. */
+@media screen and (min-width: 60em) {
+  /* The grid container is .grid itself — Material sets the inner <ul> to
+     display:contents, so the <li> are the grid items. */
+  .md-typeset .grid.cards:has(> ul > li:nth-child(3):last-child) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Looping figure videos stand in for animated GIFs — same behaviour on the page,
+   a fraction of the weight. */
+.md-typeset video {
+  max-width: min(100%, 34rem);
+  height: auto;
+  display: block;
+  margin: 0.6rem auto 0;
+  border-radius: 0.2rem;
+}
+
+/* Honour a reduced-motion preference: the browser still shows the first frame. */
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset video { animation: none; }
+}
+
+/* Figure captions sit under the image, quieter than body text. */
+.md-typeset figcaption {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  max-width: min(100%, 34rem);
+  margin: 0.4rem auto 0;
+  text-align: center;
+}
+
+/* ---- Hover-to-play figure ---- */
+.md-typeset figure.hover-video .hover-video__frame {
+  position: relative;
+  display: inline-block;
+  width: min(100%, 26rem);       /* deliberately smaller than the still figures */
+  aspect-ratio: 960 / 540;       /* keeps the still exactly on the video box */
+  line-height: 0;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.md-typeset figure.hover-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* preload="none" means no intrinsic size until first play; without this the
+     box collapses to the 300px default and the layout jumps on hover. */
+  aspect-ratio: 960 / 540;
+  outline-offset: 3px;
+}
+/* The still that shows whenever the clip is not playing: the final frame. */
+.md-typeset figure.hover-video .hover-video__still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transition: opacity 160ms ease;
+}
+.md-typeset figure.hover-video.is-playing .hover-video__still {
+  opacity: 0;
+  pointer-events: none;
+}
+.md-typeset figure.hover-video video:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+}
+
+.hover-video__hint {
+  display: inline-block;
+  margin-left: 0.3em;
+  padding: 0.05em 0.45em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+.md-typeset figure.hover-video.is-playing .hover-video__hint { opacity: 0.35; }
+
+@media (hover: none) {
+  .hover-video__hint::after { content: " (tap)"; }
+}
+
+/* ---- Project thumbnail cards ---- */
+.md-typeset .proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
+  align-items: start;
+}
+
+.md-typeset a.proj-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.md-typeset a.proj-card:hover,
+.md-typeset a.proj-card:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.proj-card__thumb {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--md-default-fg-color--lightest);
+}
+.md-typeset .proj-card__thumb img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 300ms ease;
+}
+.md-typeset a.proj-card:hover .proj-card__thumb img { transform: scale(1.04); }
+
+.proj-card__text { display: block; padding: 0.7rem 0.8rem 0.8rem; }
+
+.proj-card__title {
+  display: block;
+  font-weight: 700;
+  line-height: 1.35;
+  font-size: 0.78rem;
+}
+
+/* Collapsed by default; the description opens out on hover or keyboard focus. */
+.proj-card__desc {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease, opacity 200ms ease, margin-top 260ms ease;
+}
+.md-typeset a.proj-card:hover .proj-card__desc,
+.md-typeset a.proj-card:focus-visible .proj-card__desc {
+  max-height: 16rem;
+  opacity: 1;
+  margin-top: 0.4rem;
+}
+
+.proj-card__more {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+}
+
+/* Touch devices have no hover: show the description outright. */
+@media (hover: none) {
+  .proj-card__desc { max-height: none; opacity: 1; margin-top: 0.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset a.proj-card,
+  .md-typeset .proj-card__thumb img,
+  .proj-card__desc { transition: none; }
+}
+
+/* ---- Three-across slide row ---- */
+.md-typeset .slide-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin: 1.4rem 0 1.8rem;
+  align-items: start;
+}
+.md-typeset .slide-row figure { margin: 0; }
+.md-typeset .slide-row img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;      /* slides differ in crop; letterbox rather than crop */
+  background: #fff;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  margin: 0;
+  box-shadow: none;
+}
+.md-typeset .slide-row figcaption {
+  font-size: 0.64rem;
+  line-height: 1.45;
+  text-align: left;
+  margin: 0.35rem 0 0;
+  max-width: none;
+  color: var(--md-default-fg-color--light);
+}
+@media screen and (max-width: 60em) {
+  .md-typeset .slide-row { grid-template-columns: 1fr; }
+  .md-typeset .slide-row img { aspect-ratio: auto; }
+}
+
+/* Home page portrait: square crop (head through upper torso) shown as a circle. */
+.md-typeset img.portrait {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
+}
