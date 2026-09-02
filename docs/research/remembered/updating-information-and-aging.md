@@ -10,9 +10,11 @@ place or a new character. We recorded their brain activity as they read, then sh
 phrase and asked whether it had been in the story. What that phrase relates to — the thing
 that changed, or something that did not — tells us how much of the picture was rebuilt.
 
-**Younger adults were slow only on what had changed. Older adults were slow on everything.**
-Both groups were equally accurate, so the difference is in how quickly they could reach the
-information, not in whether they still had it.
+**Younger adults were slow only on what had changed** — suggesting they rebuild just the part
+that moved and leave the rest of the picture intact. **Older adults were slow on everything**,
+suggesting they may be rebuilding all of it. Both groups were equally accurate, so this is
+about how quickly the information can be reached, not whether it survives — and it has real
+consequences for how we remember as we age.
 
 Activity in the default mode network echoes this behavioural pattern. More on this coming
 soon...
