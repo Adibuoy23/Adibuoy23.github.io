@@ -54,7 +54,7 @@ Controlled displays establish what the visual system is given. The work below as
     <span class="proj-card__thumb"><img src="../../assets/images/fig-change-blindness.png" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">What drives change blindness in naturalistic scenes?</span>
-      <span class="proj-card__desc">Whatever is less meaningful. Using meaning maps — aggregated ratings of how meaningful each patch of an image is — we found that changes in high-meaning regions are caught faster in a change blindness task. Semantic knowledge about the world does real…</span>
+      <span class="proj-card__desc">Meaning does. Using meaning maps, aggregated ratings of how meaningful each patch of an image is, we found that changes in more meaningful regions are caught faster in a change blindness task.</span>
       <span class="proj-card__more">Read more →</span>
     </span>
   </a>
