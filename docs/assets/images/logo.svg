@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Spinning top">
-  <g fill="#243c59">
-    <!-- stem -->
-    <rect x="11.2" y="1.4" width="1.6" height="4.4" rx="0.8"/>
-    <!-- shoulder disc -->
-    <ellipse cx="12" cy="7.6" rx="7.8" ry="2.3"/>
-    <!-- body: concave sides converging to a fine point -->
-    <path d="M4.2 7.6 C6.6 14.2 9.6 18.6 12 22.6 C14.4 18.6 17.4 14.2 19.8 7.6 Z"/>
+  <g fill="none" stroke="#243c59" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- slender spire flaring to the rim of the top face -->
+    <path d="M12 2.6 C12.25 8.2 12.75 11.4 14.9 12.9"/>
+    <path d="M12 2.6 C11.75 8.2 11.25 11.4 9.1 12.9"/>
+    <!-- flat disc -->
+    <ellipse cx="12" cy="13.35" rx="8.2" ry="1.85"/>
+    <!-- opening on the top face -->
+    <ellipse cx="12" cy="12.95" rx="3.1" ry="0.72"/>
+    <!-- short cone to the pivot -->
+    <path d="M9.5 14.55 C10.6 16.7 11.5 18.3 12 19.4 C12.5 18.3 13.4 16.7 14.5 14.55"/>
   </g>
 </svg>
