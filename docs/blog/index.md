@@ -1,4 +1,5 @@
 # Blog
 
-To make research more accessible to the public, I plan on writing blogs about my research,
-and about research that I think is interesting. More on this coming soon...
+I care about getting research out of journals and into the hands of people who are curious
+about it. As part of that, I break down my own work here, along with research by others
+that I find interesting. I will do my best to post from time to time.

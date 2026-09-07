@@ -523,3 +523,118 @@
   object-fit: cover;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
 }
+
+/* ---- Blog ----
+   The listing is laid out like a newspaper or journal front: a kicker with the
+   section, a serif headline, a one-line dek, a byline row, and a hero image.
+   Material wraps each excerpt in .md-post; its children are flattened with
+   display: contents so the pieces can be placed on one grid. */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
+
+:root {
+  --blog-serif: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+}
+
+/* Landing blurb */
+.md-content__inner > header.md-typeset > p {
+  max-width: 40rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.md-post--excerpt {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas:
+    "meta   image"
+    "title  image"
+    "dek    image"
+    "action image";
+  column-gap: 1.6rem;
+  align-items: start;
+  padding: 1.6rem 0;
+  margin: 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-post--excerpt .md-post__header,
+.md-post--excerpt .md-post__content,
+.md-post--excerpt .md-post__content > p:has(> .post-hero) { display: contents; }
+.md-post--excerpt .md-post__authors { display: none; }
+
+/* Kicker row: category, read time, date */
+.md-post--excerpt .md-post__meta { grid-area: meta; margin: 0 0 0.4rem; }
+.md-post--excerpt .md-meta__list {
+  display: flex; flex-wrap: wrap; gap: 0.2rem 0.6rem; margin: 0; padding: 0;
+  font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-post--excerpt .md-meta__item { margin: 0; }
+.md-post--excerpt .md-meta__item::after { content: none; }   /* drop Material's own separator */
+.md-post--excerpt .md-meta__item:first-child { order: 3; }
+.md-post--excerpt .md-meta__item:nth-child(2) { order: 1; }
+.md-post--excerpt .md-meta__item:nth-child(3) { order: 2; }
+.md-post--excerpt .md-meta__item:nth-child(2) a { color: var(--md-accent-fg-color); font-weight: 700; }
+.md-post--excerpt .md-meta__item:nth-child(2)::after,
+.md-post--excerpt .md-meta__item:nth-child(3)::after { content: "\00b7"; margin-left: 0.6rem; }
+
+/* Headline */
+.md-post--excerpt .md-post__content h2 {
+  grid-area: title;
+  font-family: var(--blog-serif);
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+.md-post--excerpt .md-post__content h2 a { color: var(--md-default-fg-color); }
+.md-post--excerpt .md-post__content h2 a:hover { color: var(--md-accent-fg-color); }
+
+/* Dek */
+.md-post--excerpt .post-dek {
+  grid-area: dek;
+  font-family: var(--blog-serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 0.6rem;
+}
+
+/* Hero */
+.md-post--excerpt .post-hero {
+  grid-area: image;
+  min-width: 0;
+  align-self: center;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.md-post--excerpt .md-post__action { grid-area: action; align-self: end; margin: 0; font-size: 0.7rem; }
+.md-post--excerpt .md-post__action a { color: var(--md-accent-fg-color); font-weight: 700; }
+
+/* Post page: dek under the headline, hero full width */
+.md-typeset .post-dek {
+  font-family: var(--blog-serif);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+  margin: -0.4rem 0 1rem;
+}
+.md-typeset img.post-hero { max-width: 100%; margin: 0 0 1.2rem; }
+
+@media screen and (max-width: 44.9em) {
+  .md-post--excerpt {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "image" "meta" "title" "dek" "action";
+    row-gap: 0.5rem;
+  }
+  .md-post--excerpt .md-post__content h2 { font-size: 1.4rem; }
+}
