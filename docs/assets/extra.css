@@ -526,15 +526,10 @@
 
 /* ---- Blog ----
    The listing is laid out like a newspaper or journal front: a kicker with the
-   section, a serif headline, a one-line dek, a byline row, and a hero image.
+   section, a large headline, a one-line dek, a byline row, and a hero image.
+   Type stays in the site font (Hind); only size and weight change.
    Material wraps each excerpt in .md-post; its children are flattened with
    display: contents so the pieces can be placed on one grid. */
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
-
-:root {
-  --blog-serif: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
-}
-
 /* Landing blurb */
 .md-content__inner > header.md-typeset > p {
   max-width: 40rem;
@@ -584,11 +579,9 @@
 /* Headline */
 .md-post--excerpt .md-post__content h2 {
   grid-area: title;
-  font-family: var(--blog-serif);
-  font-weight: 600;
-  font-size: 1.9rem;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1.15;
   margin: 0 0 0.5rem;
 }
 .md-post--excerpt .md-post__content h2 a { color: var(--md-default-fg-color); }
@@ -597,7 +590,6 @@
 /* Dek */
 .md-post--excerpt .post-dek {
   grid-area: dek;
-  font-family: var(--blog-serif);
   font-size: 1rem;
   line-height: 1.45;
   color: var(--md-default-fg-color--light);
@@ -622,7 +614,6 @@
 
 /* Post page: dek under the headline, hero full width */
 .md-typeset .post-dek {
-  font-family: var(--blog-serif);
   font-size: 1.15rem;
   line-height: 1.4;
   color: var(--md-default-fg-color--light);
