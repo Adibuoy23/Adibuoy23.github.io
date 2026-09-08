@@ -317,8 +317,8 @@ see is stitched together from a fresh edge and a slightly stale middle, and it c
 two events that never shared a moment in the world.
 
 <figure markdown="span">
-  <iframe src="https://www.youtube.com/embed/6USG9Oyj6hU" width="720" height="405" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Demonstration of the modified RSVP paradigm"></iframe>
-  <figcaption>A demonstration of the task. Fixate the center and try to catch the letter that appears with the dot. Video by the authors.</figcaption>
+  <iframe src="https://www.youtube.com/embed/6USG9Oyj6hU?controls=0&rel=0" width="720" height="405" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Demonstration of the modified RSVP paradigm"></iframe>
+  <figcaption>A demonstration of the task. Fixate the center and try to catch the letter that appears with the dot. Click the video to play or pause; the player controls are hidden so nothing covers the stimuli. Video by the authors.</figcaption>
 </figure>
 
 This is not a defect to be fixed. There may be good reasons for a fast, rough periphery,
