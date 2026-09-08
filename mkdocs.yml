@@ -6,6 +6,7 @@ site_url: https://adibuoy23.github.io/
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   logo: assets/images/logo.svg
   favicon: assets/images/favicon.png
