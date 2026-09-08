@@ -17,7 +17,13 @@ description: >-
 
 <p class="post-dek" markdown>Two things that never appeared together on a screen can be seen as happening at once. Four experiments show why: the edge of your vision reaches perception faster than the center.</p>
 
-![Animation over a racing game screenshot: the center of gaze is labelled current information and the surrounding periphery is labelled past information](../../assets/images/blog/visual-now.gif){ .post-hero }
+<video class="post-hero" autoplay loop muted playsinline preload="auto"
+       poster="/assets/images/fig-visual-now-poster.jpg"
+       width="960" height="540"
+       aria-label="Animation over a racing game screenshot: the center of gaze is labelled current information and the surrounding periphery is labelled past information">
+  <source src="/assets/images/fig-visual-now.webm" type="video/webm">
+  <source src="/assets/images/fig-visual-now.mp4" type="video/mp4">
+</video>
 
 <!-- more -->
 

@@ -612,6 +612,10 @@
 .md-post--excerpt .md-post__action { grid-area: action; align-self: end; margin: 0; font-size: 0.7rem; }
 .md-post--excerpt .md-post__action a { color: var(--md-accent-fg-color); font-weight: 700; }
 
+/* A <video> can serve as the hero too; same slot, same look */
+.md-post--excerpt video.post-hero { display: block; }
+.md-typeset video.post-hero { display: block; width: 100%; height: auto; margin: 0 0 1.2rem; border-radius: 0.2rem; }
+
 /* Post page: dek under the headline, hero full width */
 .md-typeset .post-dek {
   font-size: 1.15rem;
