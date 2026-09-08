@@ -74,3 +74,30 @@
     document.addEventListener("DOMContentLoaded", init);
   }
 })();
+
+/* Plain players: a <video> with no native controls and Play / Replay buttons
+   placed below the frame, so nothing is ever drawn over the stimulus. */
+(function () {
+  function bindPlain(fig) {
+    if (fig.dataset.plainBound) return;
+    fig.dataset.plainBound = "1";
+    const v = fig.querySelector("video");
+    const play = fig.querySelector('[data-action="play"]');
+    const replay = fig.querySelector('[data-action="replay"]');
+    if (!v) return;
+    function setLabel() { play.textContent = v.paused ? "Play" : "Pause"; }
+    play.addEventListener("click", function () {
+      if (v.paused) { v.play().catch(function () {}); } else { v.pause(); }
+    });
+    replay.addEventListener("click", function () {
+      v.currentTime = 0; v.play().catch(function () {});
+    });
+    v.addEventListener("click", function () {
+      if (v.paused) { v.play().catch(function () {}); } else { v.pause(); }
+    });
+    ["play", "pause", "ended"].forEach(function (e) { v.addEventListener(e, setLabel); });
+    setLabel();
+  }
+  function scan() { document.querySelectorAll("[data-plain-player]").forEach(bindPlain); }
+  if (window.document$) { window.document$.subscribe(scan); } else { document.addEventListener("DOMContentLoaded", scan); }
+})();

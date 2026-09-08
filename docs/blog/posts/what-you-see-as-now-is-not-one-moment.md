@@ -316,9 +316,20 @@ routes at different speeds. The periphery runs ahead. The center lags. So the "n
 see is stitched together from a fresh edge and a slightly stale middle, and it can bind
 two events that never shared a moment in the world.
 
-<figure markdown="span">
-  <iframe src="https://www.youtube.com/embed/6USG9Oyj6hU?controls=0&rel=0" width="720" height="405" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Demonstration of the modified RSVP paradigm"></iframe>
-  <figcaption>A demonstration of the task. Fixate the center and try to catch the letter that appears with the dot. Click the video to play or pause; the player controls are hidden so nothing covers the stimuli. Video by the authors.</figcaption>
+<figure markdown="span" class="plain-player" data-plain-player>
+  <video muted playsinline preload="auto"
+         poster="../../assets/images/blog/rsvp-demo-poster.jpg"
+         width="1280" height="800"
+         aria-label="Demonstration of the task: letters flash at the center while a dot appears briefly ten degrees to the side">
+    <source src="../../assets/images/blog/rsvp-demo.webm" type="video/webm">
+    <source src="../../assets/images/blog/rsvp-demo.mp4" type="video/mp4">
+    <a href="../../assets/images/blog/rsvp-demo.mp4">Demonstration video</a>
+  </video>
+  <span class="plain-player__buttons">
+    <button type="button" class="md-button md-button--primary" data-action="play">Play</button>
+    <button type="button" class="md-button" data-action="replay">Replay</button>
+  </span>
+  <figcaption>A demonstration of the task, with the dot ten degrees to the side. Fixate the center and try to catch the letter that appears with the dot. The clip is three seconds long, so use Replay freely. Video by the authors.</figcaption>
 </figure>
 
 This is not a defect to be fixed. There may be good reasons for a fast, rough periphery,

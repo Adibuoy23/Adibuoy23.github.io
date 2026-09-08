@@ -649,3 +649,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 .md-typeset .people figcaption { margin-top: 0.4rem; font-style: normal; line-height: 1.3; }
+
+/* Plain player: video with buttons underneath, never over the frame */
+.md-typeset figure.plain-player video { display: block; width: 100%; height: auto; margin: 0 auto; border-radius: 0.2rem; cursor: pointer; }
+.md-typeset .plain-player__buttons { display: flex; justify-content: center; gap: 0.6rem; margin: 0.6rem 0 0.2rem; }
+.md-typeset .plain-player__buttons .md-button { margin: 0; padding: 0.3em 1.2em; font-size: 0.7rem; }
