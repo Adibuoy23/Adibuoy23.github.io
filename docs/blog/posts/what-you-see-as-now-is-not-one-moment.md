@@ -17,7 +17,7 @@ description: >-
 
 <p class="post-dek" markdown>Two things that never appeared together on a screen can be seen as happening at once. Four experiments show why: the edge of your vision reaches perception faster than the center.</p>
 
-<video class="post-hero" autoplay loop muted playsinline preload="auto"
+<video class="post-hero" autoplay muted playsinline preload="auto"
        poster="/assets/images/fig-visual-now-poster.jpg"
        width="960" height="540"
        aria-label="Animation over a racing game screenshot: the center of gaze is labelled current information and the surrounding periphery is labelled past information">
@@ -28,9 +28,9 @@ description: >-
 <!-- more -->
 
 Time is the one thing everybody is short of. It is precious the way money is precious,
-except that nobody can lend you an hour, and you cannot put one aside for later. From the
-day you are born the clock is running, and it never stops for anyone. We build our lives
-around it: deadlines, alarms, appointments, the last train home. Whole industries exist
+except that nobody can lend you an hour, and you cannot put one aside for later. The clock
+is always ticking. We build our lives around it: deadlines, alarms, appointments, the last
+train home. Whole industries exist
 to help us save it, and we still lose it. It is strange, then, that we do not actually
 have an organ for it.
 
