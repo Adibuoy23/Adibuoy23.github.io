@@ -17,7 +17,7 @@ description: >-
 
 <p class="post-dek" markdown>Two things that never appeared together on a screen can be seen as happening at once. Four experiments show why: the edge of your vision reaches perception faster than the center.</p>
 
-![A race diagram: a letter at the center of gaze starts first but moves slowly toward perception, a flash in the periphery starts later but moves fast, and both arrive together](../../assets/images/blog/race-to-perception.png){ .post-hero }
+![Animation over a racing game screenshot: the center of gaze is labelled current information and the surrounding periphery is labelled past information](../../assets/images/blog/visual-now.gif){ .post-hero }
 
 <!-- more -->
 
@@ -134,6 +134,11 @@ appears at the center of gaze and starts down a slow lane. A moment later, somet
 appears in the periphery and starts down a fast lane. If the fast runner catches up, the
 two arrive at perception together, and you experience them as simultaneous, even though
 they never were. Nobody had tested whether this actually happens.
+
+<figure markdown="span">
+  ![A race diagram: a letter at the center of gaze starts first but moves slowly toward perception, a flash in the periphery starts later but moves fast, and both arrive together](../../assets/images/blog/race-to-perception.png)
+  <figcaption>The race to perception. The letter at the center starts first on the slow lane. The flash in the periphery starts later on the fast lane. If it catches up, the two are experienced together. Diagram by the author.</figcaption>
+</figure>
 
 ## Catching a letter with a flash
 
@@ -353,5 +358,5 @@ perception. Journal of Experimental Psychology: General.*
 **Figure credits.** Figures 1, 3, 4, 6, 7, 9, 10, and 12 are reproduced from Upadhyayula,
 Phillips & Flombaum (2023), *Journal of Experimental Psychology: General*,
 [doi:10.1037/xge0001352](https://doi.org/10.1037/xge0001352), © American Psychological
-Association. The race diagram is by the author. The demonstration video and the attention animation are by the authors. Headshots are the faculty portraits from the Johns Hopkins [Philosophy](https://philosophy.jhu.edu/directory/ian-phillips/) and [Psychological & Brain Sciences](https://pbs.jhu.edu/directory/jonathan-flombaum/) directories.
+Association. The opening animation is from my talk and is drawn over a screenshot of *Mario Kart 8*, © Nintendo, used for illustration. The race diagram is by the author. The demonstration video and the attention animation are by the authors. Headshots are the faculty portraits from the Johns Hopkins [Philosophy](https://philosophy.jhu.edu/directory/ian-phillips/) and [Psychological & Brain Sciences](https://pbs.jhu.edu/directory/jonathan-flombaum/) directories.
 </small>
