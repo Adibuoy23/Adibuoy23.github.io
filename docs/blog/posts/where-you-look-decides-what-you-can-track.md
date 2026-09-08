@@ -27,9 +27,19 @@ the mind has only so much room to keep track of several things at once, and that
 feels so effortful. There is research that speaks to this idea. Studies of visual working
 memory suggest we can hold only a few objects in mind at a time, and that the more we try
 to hold, the less clearly we hold each one.[^1] But we do not have a good answer on what
-these resources are, or what that effort means. My first paper argued for a simpler and
-more concrete answer: a lot of the difference between good and bad trackers comes down to
-where they point their eyes, and when.
+these resources are, or what that effort means. My first paper, written with Jonathan
+Flombaum at Johns Hopkins, argued for a simpler and more concrete answer: a lot of the
+difference between good and bad trackers comes down to where they point their eyes, and
+when.
+
+<div class="people" markdown>
+
+<figure markdown="span">
+  ![Jonathan Flombaum](../../assets/images/blog/jonathan-flombaum.jpg){ .headshot }
+  <figcaption><a href="https://pbs.jhu.edu/directory/jonathan-flombaum/">Jonathan Flombaum</a><br><small>Psychological & Brain Sciences, Johns Hopkins</small></figcaption>
+</figure>
+
+</div>
 
 [^1]:
     If you want to read more: Zhang & Luck (2008), Discrete fixed-resolution
@@ -283,5 +293,5 @@ differences in multiple object tracking. Cognition.*
 Figures 1, 4, 6,
 7, 10, and 11 are reproduced from Upadhyayula & Flombaum (2020), *Cognition*,
 [doi:10.1016/j.cognition.2020.104418](https://doi.org/10.1016/j.cognition.2020.104418).
-The eye diagram, the blur illustration, the model schematic, and the model demo animation are by the author.
+The eye diagram, the blur illustration, the model schematic, and the model demo animation are by the author. The headshot is the faculty portrait from the Johns Hopkins [Psychological & Brain Sciences](https://pbs.jhu.edu/directory/jonathan-flombaum/) directory.
 </small>
