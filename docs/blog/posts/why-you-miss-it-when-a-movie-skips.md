@@ -304,8 +304,8 @@ whether the interruption comes from your own eyes or from a flickering screen.
 
 When the second paper came out, the Psychonomic Society chose it for a feature by Melinh
 Lai, who opened by confessing a lifetime of being accused of laziness "when really I've
-been hard at work watching TV and movies." Her closing line is the one I would want you to
-walk away with: "lying around watching TV isn't a waste. Our visual systems are hard at
+been hard at work watching TV and movies." Lai's closing line is the one I would want you
+to walk away with: "lying around watching TV isn't a waste. Our visual systems are hard at
 work." So the next time you feel lazy for watching a movie, think about how much
 intelligent work your brain is doing to make it look continuous.[^lai]
 
