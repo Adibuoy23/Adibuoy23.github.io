@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Hind, Helvetica, Arial, sans-serif" font-size="17">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <!-- event model -->
+  <rect x="30" y="120" width="200" height="90" rx="10" fill="#e3f0fb" stroke="#1E88E5" stroke-width="2.5"/>
+  <text x="130" y="152" text-anchor="middle" font-weight="700" fill="#1a4f7a">Model of the</text>
+  <text x="130" y="176" text-anchor="middle" font-weight="700" fill="#1a4f7a">current event</text>
+  <text x="130" y="198" text-anchor="middle" font-size="14" fill="#555">what is going on right now</text>
+  <!-- predicts -->
+  <line x1="230" y1="165" x2="300" y2="165" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="265" y="150" text-anchor="middle" font-size="14" fill="#555">predicts</text>
+  <!-- prediction -->
+  <rect x="305" y="120" width="200" height="90" rx="10" fill="#fff" stroke="#1E88E5" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="405" y="152" text-anchor="middle" font-weight="700" fill="#1a4f7a">Expected</text>
+  <text x="405" y="176" text-anchor="middle" font-weight="700" fill="#1a4f7a">next moment</text>
+  <text x="405" y="198" text-anchor="middle" font-size="14" fill="#555">where things are heading</text>
+  <!-- input from the eyes -->
+  <rect x="305" y="290" width="200" height="80" rx="10" fill="#f4f4f4" stroke="#777" stroke-width="2"/>
+  <text x="405" y="322" text-anchor="middle" font-weight="700" fill="#333">What the eyes deliver</text>
+  <text x="405" y="346" text-anchor="middle" font-size="14" fill="#555">after a blink, a saccade, or a flicker</text>
+  <!-- compare -->
+  <line x1="505" y1="165" x2="575" y2="205" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="505" y1="330" x2="575" y2="255" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <polygon points="640,170 720,230 640,290 560,230" fill="#fff8e1" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="640" y="226" text-anchor="middle" font-weight="700" fill="#5d4a00">Do they</text>
+  <text x="640" y="248" text-anchor="middle" font-weight="700" fill="#5d4a00">match?</text>
+  <!-- yes branch -->
+  <line x1="720" y1="230" x2="760" y2="130" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="752" y="180" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="700">yes</text>
+  <rect x="740" y="50" width="200" height="90" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2.5"/>
+  <text x="840" y="80" text-anchor="middle" font-weight="700" fill="#1b5e20">Keep going</text>
+  <text x="840" y="102" text-anchor="middle" font-size="14" fill="#555">the gap is bridged and</text>
+  <text x="840" y="122" text-anchor="middle" font-size="14" fill="#555">the world feels continuous</text>
+  <!-- no branch -->
+  <line x1="720" y1="230" x2="760" y2="330" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="752" y="290" text-anchor="middle" font-size="14" fill="#c62828" font-weight="700">no</text>
+  <rect x="740" y="290" width="200" height="90" rx="10" fill="#fdecea" stroke="#e53935" stroke-width="2.5"/>
+  <text x="840" y="320" text-anchor="middle" font-weight="700" fill="#8e1c1c">Something changed</text>
+  <text x="840" y="342" text-anchor="middle" font-size="14" fill="#555">an event boundary: update</text>
+  <text x="840" y="362" text-anchor="middle" font-size="14" fill="#555">the model, notice the change</text>
+  <!-- feedback loop from the outcomes back to the model -->
+  <path d="M 840 380 L 840 405 L 130 405 L 130 210" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+  <text x="485" y="400" text-anchor="middle" font-size="13" fill="#888">the model is updated and the cycle repeats, many times a second</text>
+  <!-- film examples -->
+  <text x="130" y="60" font-size="14" fill="#555">In the experiments:</text>
+  <text x="130" y="82" font-size="14" fill="#2e7d32">forward jump → input matches the prediction → missed</text>
+  <text x="130" y="102" font-size="14" fill="#c62828">backward jump → input contradicts it → noticed</text>
+</svg>

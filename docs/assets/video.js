@@ -101,3 +101,42 @@
   function scan() { document.querySelectorAll("[data-plain-player]").forEach(bindPlain); }
   if (window.document$) { window.document$.subscribe(scan); } else { document.addEventListener("DOMContentLoaded", scan); }
 })();
+
+/* Embedded experiment demos: an <iframe> plus Start and Pause buttons underneath.
+   The buttons message the frame; the frame reports its state back. The space bar
+   is forwarded into the frame while the demo runs, so the reader never has to
+   click inside it, and the page does not scroll on space. */
+(function () {
+  function bindDemo(fig) {
+    if (fig.dataset.demoBound) return;
+    fig.dataset.demoBound = "1";
+    const frame = fig.querySelector("iframe");
+    const startBtn = fig.querySelector("[data-demo-start]");
+    const pauseBtn = fig.querySelector("[data-demo-pause]");
+    if (!frame || !startBtn) return;
+    let state = "idle";
+    function send(msg) { frame.contentWindow.postMessage(Object.assign({ type: "flicker-demo" }, msg), "*"); }
+    startBtn.addEventListener("click", function () { send({ action: "start" }); });
+    if (pauseBtn) pauseBtn.addEventListener("click", function () {
+      send({ action: state === "paused" ? "resume" : "pause" });
+    });
+    window.addEventListener("message", function (e) {
+      if (!e.data || e.data.type !== "flicker-demo" || e.source !== frame.contentWindow) return;
+      state = e.data.state;
+      if (state === "running") { startBtn.textContent = "Running\u2026"; startBtn.disabled = true; if (pauseBtn) { pauseBtn.textContent = "Pause"; pauseBtn.disabled = false; } }
+      if (state === "paused") { if (pauseBtn) pauseBtn.textContent = "Resume"; }
+      if (state === "done") { startBtn.textContent = "Run it again"; startBtn.disabled = false; if (pauseBtn) { pauseBtn.textContent = "Pause"; pauseBtn.disabled = true; } }
+    });
+    function onKey(e) {
+      if (state !== "running" || e.key !== " ") return;
+      e.preventDefault();
+      if (e.repeat) return;
+      send({ action: "key", kind: e.type, key: " " });
+    }
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("keyup", onKey);
+    if (pauseBtn) pauseBtn.disabled = true;
+  }
+  function scan() { document.querySelectorAll("[data-demo-frame]").forEach(bindDemo); }
+  if (window.document$) { window.document$.subscribe(scan); } else { document.addEventListener("DOMContentLoaded", scan); }
+})();

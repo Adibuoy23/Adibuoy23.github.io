@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flicker paradigm demo</title>
+  <!-- Embedded copy of https://github.com/Adibuoy23/temporal_change_blindness_longer_shifts
+       with the consent, instruction, and survey screens removed. The task itself, the
+       plugin, and the stimuli are unchanged; stimuli are served from the original demo. -->
+  <script src="./jspsych/jspsych.js"></script>
+  <script src="./jspsych/plugin-html-keyboard-response.js"></script>
+  <script src="./jspsych/plugin-preload.js"></script>
+  <script src="./jspsych/plugin-html-button-response.js"></script>
+  <script src="./plugin-cb-video.js"></script>
+  <script src="./input.js"></script>
+  <link rel="stylesheet" href="./jspsych/jspsych.css">
+  <style>
+    html, body { margin: 0; background: #fff; overflow: hidden; }
+    .jspsych-display-element { min-height: 0; }
+    .jspsych-content-wrapper { min-height: 0; }
+    .jspsych-content { max-width: 100%; }
+    /* The wrapper shrinks to the visible video; the mask and the two hidden
+       videos are stretched to that box so every layer has the same size. */
+    div:has(> #video_0) { display: inline-block; max-width: 100%; line-height: 0; }
+    #video_0 { max-width: 100%; height: auto; }
+    #video_1, #video_2, #mask { width: 100% !important; height: 100% !important; }
+    #mask { object-fit: fill; }
+    .instructions { max-width: 40rem; margin: 0 auto; padding: 1rem 1.5rem; text-align: left;
+                    font-family: Hind, Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.45; color: #333; }
+    .instructions h2 { font-size: 22px; margin: 0.2rem 0 0.8rem; }
+    .instructions ol { padding-left: 1.4rem; }
+    #paused { position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+              background: rgba(255,255,255,0.75); font-family: Hind, Helvetica, Arial, sans-serif; font-size: 22px; color: #333; z-index: 10; }
+    #idle { display: flex; align-items: center; justify-content: center; height: 100vh;
+            font-family: Hind, Helvetica, Arial, sans-serif; color: #666; font-size: 18px; text-align: center; padding: 0 1rem; }
+  </style>
+</head>
+<body>
+  <div id="idle">Press <strong>&nbsp;Start&nbsp;</strong> below to run the demo.</div>
+<script>
+  /* The plugin reads this global (the original page defined it). */
+  var participant_id = 0;
+  var running = false;
+  var jsPsych = initJsPsych({
+    on_finish: function () {
+      document.body.style.cursor = 'default';
+      running = false; paused = false;
+      overlay().style.display = 'none';
+      jsPsych.getDisplayElement().innerHTML =
+        '<div id="idle">Done. Press <strong>&nbsp;Start&nbsp;</strong> to run it again.</div>';
+      window.parent.postMessage({ type: 'flicker-demo', state: 'done' }, '*');
+    }
+  });
+
+  function buildTimeline() {
+    var timeline = [];
+    timeline.push({
+      type: jsPsychHtmlButtonResponse,
+      stimulus:
+        '<div class="instructions">' +
+        '<h2>What to do</h2>' +
+        '<ol>' +
+        '<li>You will watch two short clips, about a minute each, with no sound.</li>' +
+        '<li>The screen will flicker white for a fraction of a second every two seconds. That is normal.</li>' +
+        '<li>During some flickers the clip <strong>jumps forward or backward in time</strong>.</li>' +
+        '<li>Press the <strong>space bar</strong> as soon as you notice a jump. You will see <em>Good job!</em> for a hit and <em>Nope!</em> for a press with no jump. A jump you miss shows <em>Missed it!</em></li>' +
+        '<li>Keep your eyes on the video. Use Pause below the frame if you need a moment.</li>' +
+        '</ol>' +
+        '<p>Loading the clips takes a few seconds after you press Begin.</p>' +
+        '</div>',
+      choices: ['Begin'],
+      on_start: function () { document.body.style.cursor = 'default'; }
+    });
+    timeline.push({
+      type: jsPsychPreload,
+      video: [stimuli.map(a => a.video_one), stimuli.map(a => a.video_two), stimuli.map(a => a.video_three)],
+      message: 'Loading the clips…'
+    });
+    var fixation = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<div style="font-size:60px;color:black;text-align:center;line-height:375px;">+</div>',
+      choices: 'NO_KEYS',
+      trial_duration: 1000,
+      on_start: function () { document.body.style.cursor = 'none'; }
+    };
+    var trial = {
+      type: jsPsychCbVideo,
+      response_allowed_while_playing: true,
+      width: 960,
+      stimulus: [jsPsych.timelineVariable('video_one'), jsPsych.timelineVariable('video_two'), jsPsych.timelineVariable('video_three')],
+      flicker_duration: 150,
+      flicker_frequency: 2000,
+      choices: ' ',
+      trial_ends_after_video: true,
+      prompt: ' ',
+      response_ends_trial: false,
+      show_feedback: true,
+      magnitude: jsPsych.timelineVariable('magnitude'),
+      timepoints: jsPsych.timelineVariable('timepoints'),
+      practice: true,
+      participant_id: 0
+    };
+    timeline.push({ timeline: [fixation, trial], timeline_variables: stimuli });
+    return timeline;
+  }
+
+  function start() {
+    if (running) return;
+    running = true;
+    var idle = document.getElementById('idle'); if (idle) idle.remove();
+    window.focus();
+    window.parent.postMessage({ type: 'flicker-demo', state: 'running' }, '*');
+    jsPsych.run(buildTimeline());
+  }
+
+  if (/[?&]autostart=1/.test(location.search)) { window.addEventListener('load', start); }
+
+  var paused = false;
+  /* jsPsych clears the body when it starts, so the overlay is (re)created on demand. */
+  function overlay() {
+    var el = document.getElementById('paused');
+    if (!el) { el = document.createElement('div'); el.id = 'paused'; el.textContent = 'Paused'; document.body.appendChild(el); }
+    return el;
+  }
+  function setPaused(p) {
+    if (!running || paused === p) return;
+    paused = p;
+    if (p) { if (window.__flickerPause) window.__flickerPause(); }
+    else { if (window.__flickerResume) window.__flickerResume(); }
+    overlay().style.display = p ? 'flex' : 'none';
+    window.parent.postMessage({ type: 'flicker-demo', state: p ? 'paused' : 'running' }, '*');
+  }
+
+  /* Key presses made on the parent page are forwarded here and re-dispatched on
+     jsPsych's display element, which is where its keyboard listener lives. */
+  function forwardKey(kind, key) {
+    if (!running || paused) return;
+    var target = jsPsych.getDisplayElement() || document.body;
+    target.dispatchEvent(new KeyboardEvent(kind, { key: key, code: key === ' ' ? 'Space' : key, bubbles: true, cancelable: true }));
+  }
+
+  window.addEventListener('message', function (e) {
+    var d = e.data; if (!d || d.type !== 'flicker-demo') return;
+    if (d.action === 'start') start();
+    else if (d.action === 'pause') setPaused(true);
+    else if (d.action === 'resume') setPaused(false);
+    else if (d.action === 'key') forwardKey(d.kind, d.key);
+  });
+</script>
+</body>
+</html>

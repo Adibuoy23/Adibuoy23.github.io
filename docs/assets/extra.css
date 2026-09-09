@@ -658,3 +658,8 @@
 .md-typeset figure.plain-player video { display: block; width: 100%; height: auto; margin: 0 auto; border-radius: 0.2rem; cursor: pointer; }
 .md-typeset .plain-player__buttons { display: flex; justify-content: center; gap: 0.6rem; margin: 0.6rem 0 0.2rem; }
 .md-typeset .plain-player__buttons .md-button { margin: 0; padding: 0.3em 1.2em; font-size: 0.7rem; }
+
+/* Embedded experiment demo */
+.md-typeset figure.demo-frame iframe { display: block; width: 100%; aspect-ratio: 16 / 9.4; height: auto; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 0.2rem; background: #fff; }
+.md-typeset figure.demo-frame .demo-frame__buttons { display: flex; justify-content: center; gap: 0.6rem; margin: 0.6rem 0 0.2rem; }
+.md-typeset figure.demo-frame .md-button { margin: 0; padding: 0.3em 1.4em; font-size: 0.7rem; }
