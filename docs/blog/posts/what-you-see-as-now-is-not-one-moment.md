@@ -358,6 +358,9 @@ perception. Journal of Experimental Psychology: General.*
 [:material-database: Data & materials](https://osf.io/q9kun/) ·
 [:material-youtube: Talk](https://www.youtube.com/watch?v=JQlGu8vNaOw)
 
+
+[:material-flask-outline: This work in the research section: How do we experience the perception of now?](../../research/perceived/how-do-we-experience-the-perception-of-now.md)
+
 ---
 
 <small>

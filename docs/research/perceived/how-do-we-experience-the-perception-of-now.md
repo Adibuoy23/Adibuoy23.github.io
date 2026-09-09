@@ -22,7 +22,8 @@ moment of visual experience is not a moment in the world.
 [:material-file-document: PDF](../../files/papers/Eccentricity_paper.pdf) ·
 [:material-database: Data & materials](https://osf.io/q9kun/) ·
 [:material-youtube: Talk](https://www.youtube.com/watch?v=JQlGu8vNaOw) ·
-[:material-play-circle: Paradigm demo](https://youtu.be/6USG9Oyj6hU)
+[:material-play-circle: Paradigm demo](https://youtu.be/6USG9Oyj6hU) ·
+[:material-post-outline: Blog post](../../blog/posts/what-you-see-as-now-is-not-one-moment.md)
 
 ---
 

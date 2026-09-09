@@ -26,7 +26,8 @@ Psychophysics.*
 [:material-file-document: AP&P](https://rdcu.be/du6GP) ·
 [:material-database: JoV data](https://osf.io/j95z3/) ·
 [:material-database: AP&P data](https://osf.io/296jh/) ·
-[:material-play-circle: Try the demo](../../resources/index.md)
+[:material-play-circle: Try the demo](../../resources/index.md) ·
+[:material-post-outline: Blog post](../../blog/posts/why-you-miss-it-when-a-movie-skips.md)
 
 ---
 

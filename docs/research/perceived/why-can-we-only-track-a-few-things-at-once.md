@@ -20,7 +20,8 @@ and it predicts who will be good at the task and who won't.
 
 *Upadhyayula & Flombaum (2020), Cognition.*
 [:material-file-document: PDF](../../files/papers/MOT_paper.pdf) ·
-[:material-github: Code](https://github.com/Adibuoy23/Multiple-Object-Tracking)
+[:material-github: Code](https://github.com/Adibuoy23/Multiple-Object-Tracking) ·
+[:material-post-outline: Blog post](../../blog/posts/where-you-look-decides-what-you-can-track.md)
 
 ---
 

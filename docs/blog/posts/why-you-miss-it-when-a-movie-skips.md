@@ -6,6 +6,7 @@ authors:
 categories:
   - Perception
   - Attention
+  - Comprehension
 slug: why-you-miss-it-when-a-movie-skips
 description: >-
   Jump a film a full second forward and most viewers never notice. Jump it
@@ -323,6 +324,9 @@ viewing: Insights from a flicker paradigm. Attention, Perception & Psychophysics
 [:material-file-document: Paper](https://rdcu.be/du6GP) ·
 [:material-database: Data & materials](https://osf.io/296jh/) ·
 [:material-newspaper-variant-outline: Psychonomic Society feature](https://featuredcontent.psychonomic.org/now-you-dont-see-me-and-now-you-still-dont-see-me-detecting-movie-skips-using-a-flicker-paradigm/)
+
+
+[:material-flask-outline: This work in the research section: Predictive constraints on vision](../../research/perceived/predictive-constraints-on-vision.md)
 
 ---
 
