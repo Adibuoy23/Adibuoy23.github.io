@@ -32,7 +32,7 @@ except that nobody can lend you an hour, and you cannot put one aside for later.
 is always ticking. We build our lives around it: deadlines, alarms, appointments, the last
 train home. Whole industries exist
 to help us save it, and we still lose it. It is strange, then, that we do not have a
-dedicated system for it.
+dedicated system in the brain to process it.
 
 Think about what that means. Light lands on the retina and is handled by visual cortex.
 Pressure on the skin goes to somatosensory cortex. Sound is decoded in auditory cortex.
