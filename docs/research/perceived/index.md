@@ -15,6 +15,7 @@ you.
     <span class="proj-card__thumb"><img src="../../assets/images/fig-mot.png" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">Why can we only track a few things at once?</span>
+      <span class="proj-card__badge">Blog post</span>
       <span class="proj-card__desc">Watch a shell game and you lose the ball. The usual explanation appeals to "mental effort," which is hard to pin down. My explanation is simpler: where you look. I built a model that takes a participant's own eye movements as input and tracks the targets…</span>
       <span class="proj-card__more">Read more →</span>
     </span>
@@ -23,6 +24,7 @@ you.
     <span class="proj-card__thumb"><img src="../../assets/images/fig-visual-now-poster.jpg" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">How do we experience the perception of now?</span>
+      <span class="proj-card__badge">Blog post</span>
       <span class="proj-card__desc">Not all at once. By breaking the synchrony between foveal and peripheral vision in an RSVP task, we found that the moment you experience as the present is stitched together from present information at the center of gaze and past information from the…</span>
       <span class="proj-card__more">Read more →</span>
     </span>
@@ -46,6 +48,7 @@ Controlled displays establish what the visual system is given. The work below as
     <span class="proj-card__thumb"><img src="../../assets/images/fig-jump-paradigm.png" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">Predictive constraints on vision</span>
+      <span class="proj-card__badge">Blog post</span>
       <span class="proj-card__desc">Despite gaps in sensory input and attention, conscious experience feels rich and continuous. One possibility is that the mind intelligently bridges those gaps. To test that, I embedded films with brief temporal disruptions — jumps forward or backward in…</span>
       <span class="proj-card__more">Read more →</span>
     </span>
