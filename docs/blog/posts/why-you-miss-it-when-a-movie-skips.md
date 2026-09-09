@@ -143,6 +143,11 @@ forward jump runs with the flow of the event, so a prediction engine should let 
 through. A backward jump throws the event into reverse, which no prediction anticipates,
 so it should stand out.
 
+<figure markdown="span">
+  ![Three filmstrips. In each, the eye moves at the vertical line. On the re-view strip the film jumps back to a frame already seen. On the no-change strip it continues. On the skip-ahead strip it jumps forward to a frame not yet seen.](../../assets/images/fig-jump-paradigm.png){ width="640" }
+  <figcaption>The saccade-contingent design. Three copies of the clip play in step, offset by half a second to two seconds, and only one is visible. The vertical line marks an eye movement. At that instant the visible copy is swapped: back to a frame the viewer has already seen (re-view), forward to one they have not (skip-ahead), or, on control trials, to the same frame (no change). Because the swap happens while vision is suppressed, the only thing that can give it away is the content. Schematic by the author.</figcaption>
+</figure>
+
 Two things stood out. First, people missed a lot. Even though they knew the jumps were
 coming and were watching for them, they failed to report about a quarter of the jumps in
 the first experiment. False alarms were almost nonexistent, so these were real misses.
@@ -322,7 +327,7 @@ viewing: Insights from a flicker paradigm. Attention, Perception & Psychophysics
 ---
 
 <small>
-**Figure credits.** The opening timeline and the prediction engine diagram are by the author. Figures 2, 5, 8, and 9 are
+**Figure credits.** The opening timeline, the saccade-contingent schematic, and the prediction engine diagram are by the author. Figures 2, 5, 8, and 9 are
 reproduced from Upadhyayula & Henderson (2023), *Journal of Vision*,
 [doi:10.1167/jov.23.2.13](https://doi.org/10.1167/jov.23.2.13), published under a
 CC BY 4.0 license. Figures 1, 2, and 4 are reproduced from Upadhyayula & Henderson (2024),
