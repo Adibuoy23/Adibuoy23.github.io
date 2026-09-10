@@ -225,6 +225,56 @@
   font-weight: 700;
 }
 
+/* Method themes (as opposed to topics): black text in a white box with a black
+   outline. Selected chips invert to black with white text so the choice reads. */
+.pub-chip[data-theme="computational-modeling"], .pub-tag[data-theme="computational-modeling"],
+.pub-chip[data-theme="fmri"],                   .pub-tag[data-theme="fmri"],
+.pub-chip[data-theme="eye-tracking"],           .pub-tag[data-theme="eye-tracking"] {
+  --pub-c: #000;
+  color: #000;
+  background: #fff;
+  border-color: #000;
+}
+.pub-chip[data-theme="computational-modeling"]:hover, .pub-tag[data-theme="computational-modeling"]:hover,
+.pub-chip[data-theme="fmri"]:hover,                   .pub-tag[data-theme="fmri"]:hover,
+.pub-chip[data-theme="eye-tracking"]:hover,           .pub-tag[data-theme="eye-tracking"]:hover {
+  color: #000;
+  background: #f0f0f0;
+  border-color: #000;
+}
+.pub-chip.is-active[data-theme="computational-modeling"],
+.pub-chip.is-active[data-theme="fmri"],
+.pub-chip.is-active[data-theme="eye-tracking"] {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.pub-tag.is-active[data-theme="computational-modeling"],
+.pub-tag.is-active[data-theme="fmri"],
+.pub-tag.is-active[data-theme="eye-tracking"] {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+[data-md-color-scheme="slate"] .pub-chip[data-theme="computational-modeling"], [data-md-color-scheme="slate"] .pub-tag[data-theme="computational-modeling"],
+[data-md-color-scheme="slate"] .pub-chip[data-theme="fmri"],                   [data-md-color-scheme="slate"] .pub-tag[data-theme="fmri"],
+[data-md-color-scheme="slate"] .pub-chip[data-theme="eye-tracking"],           [data-md-color-scheme="slate"] .pub-tag[data-theme="eye-tracking"] {
+  --pub-c: #fff;
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+}
+[data-md-color-scheme="slate"] .pub-chip.is-active[data-theme="computational-modeling"],
+[data-md-color-scheme="slate"] .pub-chip.is-active[data-theme="fmri"],
+[data-md-color-scheme="slate"] .pub-chip.is-active[data-theme="eye-tracking"],
+[data-md-color-scheme="slate"] .pub-tag.is-active[data-theme="computational-modeling"],
+[data-md-color-scheme="slate"] .pub-tag.is-active[data-theme="fmri"],
+[data-md-color-scheme="slate"] .pub-tag.is-active[data-theme="eye-tracking"] {
+  background: #fff;
+  border-color: #fff;
+  color: #1b1b1f;
+}
+
 /* Match each entry's left rule to its first theme. */
 .md-typeset .pub[data-themes^="perception"]      { border-left-color: #2f66c9; }
 .md-typeset .pub[data-themes^="attention"]       { border-left-color: #0b7d70; }
