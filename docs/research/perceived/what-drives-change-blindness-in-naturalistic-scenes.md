@@ -8,7 +8,8 @@ viewing conditions are impoverished.
 *Lu, Upadhyayula & Henderson (2025), Visual Cognition.*
 [:material-file-document: Paper](https://doi.org/10.1080/13506285.2025.2507946) ·
 [:material-lock-open-variant: Free full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12380198/) ·
-[:material-database: Data](https://osf.io/3qv9c/)
+[:material-database: Data](https://osf.io/3qv9c/) ·
+[:material-post-outline: Blog post](../../blog/posts/why-you-cannot-spot-the-difference.md)
 
 ---
 

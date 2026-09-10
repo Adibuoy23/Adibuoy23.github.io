@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flicker change detection demo</title>
+  <!-- Embedded copy of https://alanzhihaolu.github.io/demos/flicker-change-meaning/
+       (Alan Lu), trimmed to one instruction screen and six trials. The task, the
+       plugin, and the stimuli are unchanged; images are served from the original demo. -->
+  <script>
+    /* Pausable timers, installed before jsPsych loads so that the flicker, the
+       trial time limit, and jsPsych's own timeouts can all be frozen from the page. */
+    (function () {
+      var native = { set: window.setTimeout.bind(window), clear: window.clearTimeout.bind(window) };
+      var timers = new Map(), next = 1, paused = false;
+      window.setTimeout = function (cb, ms) {
+        var args = Array.prototype.slice.call(arguments, 2);
+        var id = next++, t = { cb: cb, args: args, remaining: ms || 0, start: performance.now(), native: null };
+        if (!paused) t.native = native.set(function () { timers.delete(id); cb.apply(null, args); }, ms || 0);
+        timers.set(id, t); return id;
+      };
+      window.clearTimeout = function (id) { var t = timers.get(id); if (t) { native.clear(t.native); timers.delete(id); } };
+      window.__demoPause = function () {
+        if (paused) return; paused = true; var now = performance.now();
+        timers.forEach(function (t) { native.clear(t.native); t.remaining -= (now - t.start); });
+      };
+      window.__demoResume = function () {
+        if (!paused) return; paused = false; var now = performance.now();
+        timers.forEach(function (t, id) { t.start = now; t.native = native.set(function () { timers.delete(id); t.cb.apply(null, t.args); }, Math.max(0, t.remaining)); });
+      };
+    })();
+  </script>
+  <script src="./jspsych/jspsych.js"></script>
+  <script src="./jspsych/jspsych-cb-flicker.js"></script>
+  <script src="./jspsych/jspsych-html-button-response.js"></script>
+  <script src="./jspsych/jspsych-html-keyboard-response.js"></script>
+  <script src="./jspsych/jspsych-preload.js"></script>
+  <script src="./list.js"></script>
+  <link rel="stylesheet" href="./jspsych/jspsych.css">
+  <style>
+    html, body { margin: 0; background: #fff; overflow: hidden; }
+    .jspsych-display-element { min-height: 100vh; }
+    .jspsych-content { max-width: 100%; }
+    #paused { position: fixed; inset: 0; display: none; align-items: center; justify-content: center;
+              background: rgba(255,255,255,0.75); font-family: Hind, Helvetica, Arial, sans-serif; font-size: 22px; color: #333; z-index: 10; }
+    #idle { display: flex; align-items: center; justify-content: center; height: 100vh;
+            font-family: Hind, Helvetica, Arial, sans-serif; color: #666; font-size: 18px; text-align: center; padding: 0 1rem; }
+    .instructions { max-width: 40rem; margin: 0 auto; padding: 0.5rem 1.5rem; text-align: left;
+                    font-family: Hind, Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.45; color: #333; }
+    .instructions h2 { font-size: 22px; margin: 0.2rem 0 0.8rem; }
+    .instructions ol { padding-left: 1.4rem; }
+    .fb { font-family: Hind, Helvetica, Arial, sans-serif; font-size: 26px; color: #333; }
+  </style>
+</head>
+<body>
+  <div id="idle">Press <strong>&nbsp;Start&nbsp;</strong> below to run the demo.</div>
+<script>
+  var running = false, paused = false;
+  function overlay() {
+    var el = document.getElementById('paused');
+    if (!el) { el = document.createElement('div'); el.id = 'paused'; el.textContent = 'Paused'; document.body.appendChild(el); }
+    return el;
+  }
+  var image_dimensions = { original: [1024, 768], scaled: [700, 525] };
+  // Six trials: the first three high-meaning and first three low-meaning scenes, interleaved.
+  var high = raw_stimuli.filter(function (s) { return s.type === 'HighMean'; }).slice(0, 3);
+  var low  = raw_stimuli.filter(function (s) { return s.type === 'LowMean'; }).slice(0, 3);
+  var stims = [high[0], low[0], high[1], low[1], high[2], low[2]];
+
+  function buildTimeline() {
+    var timeline = [];
+    timeline.push({
+      type: 'html-button-response',
+      stimulus:
+        '<div class="instructions"><h2>What to do</h2><ol>' +
+        '<li>A picture will flicker on and off. Somewhere in it, one small region is <strong>distorted</strong> in every other flash.</li>' +
+        '<li>Find the distortion as quickly as you can and <strong>press the space bar</strong> to stop the flicker. You are being timed from the first flash.</li>' +
+        '<li>Then <strong>click</strong> on the picture where the distortion was. You will see whether you were right.</li>' +
+        '<li>If you cannot find it within 15 seconds the flicker stops on its own; just make your best guess.</li>' +
+        '<li>Six pictures. Use Pause below the frame if you need a moment.</li>' +
+        '</ol><p>The pictures load after you press Begin.</p></div>',
+      choices: ['Begin'],
+      on_start: function () { document.body.style.cursor = 'default'; }
+    });
+    timeline.push({ type: 'preload', images: stims.map(function (s) { return s.first_image; }).concat(stims.map(function (s) { return s.second_image; }), [mask_stimulus]), message: 'Loading the pictures…' });
+    var fixation = {
+      type: 'html-keyboard-response',
+      stimulus: '<div style="background-image:url(' + mask_stimulus + ');height:' + image_dimensions.scaled[1] + 'px;width:' + image_dimensions.scaled[0] + 'px;margin:0 auto">' +
+                '<div style="font-size:60px;color:white;text-align:center;line-height:' + image_dimensions.scaled[1] + 'px;">+</div></div>',
+      choices: jsPsych.NO_KEYS, trial_duration: 2000,
+      on_start: function () { document.body.style.cursor = 'none'; }
+    };
+    var trial = {
+      type: 'cb-flicker',
+      first_image: jsPsych.timelineVariable('first_image'),
+      second_image: jsPsych.timelineVariable('second_image'),
+      mask: mask_stimulus,
+      patches: jsPsych.timelineVariable('patches'),
+      choices: [' '],
+      image_dimensions: image_dimensions,
+      trial_duration: 15000,
+      flicker_end_image: 1
+    };
+    var feedback = {
+      type: 'html-keyboard-response',
+      stimulus: function () {
+        var d = jsPsych.data.get().last(1).values()[0];
+        var kind = jsPsych.timelineVariable('type', true) === 'HighMean' ? 'a more meaningful' : 'a less meaningful';
+        return '<p class="fb">' + (d.hit ? 'Correct!' : 'Not quite.') + '</p><p>That change came from ' + kind + ' region of the scene, chosen among regions of matched saliency.</p>';
+      },
+      choices: jsPsych.NO_KEYS, trial_duration: 2600,
+      on_start: function () { document.body.style.cursor = 'default'; }
+    };
+    timeline.push({ timeline: [fixation, trial, feedback], timeline_variables: stims });
+    return timeline;
+  }
+
+  function finish() {
+    document.body.style.cursor = 'default';
+    running = false; paused = false; overlay().style.display = 'none';
+    jsPsych.getDisplayElement().innerHTML = '<div id="idle">Done. Press <strong>&nbsp;Start&nbsp;</strong> to run it again.</div>';
+    window.parent.postMessage({ type: 'flicker-demo', state: 'done' }, '*');
+  }
+  function start() {
+    if (running) return;
+    running = true;
+    var idle = document.getElementById('idle'); if (idle) idle.remove();
+    window.focus();
+    window.parent.postMessage({ type: 'flicker-demo', state: 'running' }, '*');
+    jsPsych.init({ timeline: buildTimeline(), on_finish: finish });
+  }
+  function setPaused(p) {
+    if (!running || paused === p) return;
+    paused = p;
+    if (p) window.__demoPause(); else window.__demoResume();
+    overlay().style.display = p ? 'flex' : 'none';
+    window.parent.postMessage({ type: 'flicker-demo', state: p ? 'paused' : 'running' }, '*');
+  }
+  function forwardKey(kind, key) {
+    if (!running || paused) return;
+    document.dispatchEvent(new KeyboardEvent(kind, { key: key, code: key === ' ' ? 'Space' : key, keyCode: key === ' ' ? 32 : 0, which: key === ' ' ? 32 : 0, bubbles: true, cancelable: true }));
+  }
+  window.addEventListener('message', function (e) {
+    var d = e.data; if (!d || d.type !== 'flicker-demo') return;
+    if (d.action === 'start') start();
+    else if (d.action === 'pause') setPaused(true);
+    else if (d.action === 'resume') setPaused(false);
+    else if (d.action === 'key') forwardKey(d.kind, d.key);
+  });
+  if (/[?&]autostart=1/.test(location.search)) window.addEventListener('load', start);
+</script>
+</body>
+</html>
