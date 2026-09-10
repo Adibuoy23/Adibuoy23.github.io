@@ -273,12 +273,28 @@ represent a connection between the first panel of a strip and the fifth, so in a
 narrative, where the payoff of a set-up may arrive many panels later, it has nothing to
 say. It has a deeper problem too. Theories of visual narrative comprehension hold that
 the grammar and the meaning are processed side by side, as two parallel streams, and
-there is brain-recording evidence for that separation. Modeling the two in parallel means
+there is brain-recording evidence for that separation.[^parallel] Modeling the two in parallel means
 tracking how one role leads to the next and, at the same time, how each role tends to go
 with particular changes in meaning. An n-gram can count one of those or the other, never
 both at once. That is why we treated the n-grams as a baseline rather than a candidate
 theory, and why the discussion in the paper rests on the parser and the Markov model,
-which can hold both streams. The Markov model can carry more, but it is still a chain: each panel is predicted
+which can hold both streams.
+
+[^parallel]:
+    For the theories, see Cohn (2020), Your brain on comics: A cognitive model of visual
+    narrative comprehension, *Topics in Cognitive Science*,
+    [doi:10.1111/tops.12421](https://doi.org/10.1111/tops.12421), and Loschky, Larson,
+    Smith & Magliano (2020), The Scene Perception & Event Comprehension Theory (SPECT)
+    applied to visual narratives, *Topics in Cognitive Science*,
+    [doi:10.1111/tops.12455](https://doi.org/10.1111/tops.12455). For the brain evidence,
+    see Cohn, Paczynski, Jackendoff, Holcomb & Kuperberg (2012), (Pea)nuts and bolts of
+    visual narrative: Structure and meaning in sequential image comprehension, *Cognitive
+    Psychology*,
+    [doi:10.1016/j.cogpsych.2012.01.003](https://doi.org/10.1016/j.cogpsych.2012.01.003),
+    which found that the brain's response to meaning was blind to the presence of
+    narrative structure, and the earlier footnote on Cohn and colleagues (2014).
+
+The Markov model can carry more, but it is still a chain: each panel is predicted
 from the previous state alone, and a relationship that skips over intervening panels has
 to be smuggled in through the states. Intuitively, the tree looks like the
 structure built for the job. It represents a long-distance dependency directly, as one
