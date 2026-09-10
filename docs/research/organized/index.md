@@ -10,6 +10,7 @@ NLP to ask what that structure is, and what makes a moment matter within it.
     <span class="proj-card__thumb"><img src="../../assets/images/fig-narrative-grammar-poster.jpg" alt="" loading="lazy"></span>
     <span class="proj-card__text">
       <span class="proj-card__title">Does visual narrative comprehension involve a grammar?</span>
+      <span class="proj-card__badge">Blog post</span>
       <span class="proj-card__desc">From cave paintings to murals, visual storytelling has long existed as a communicative tool. When comprehending visual narratives, do we parse them using a grammar, similar to that of language?</span>
       <span class="proj-card__more">Read more →</span>
     </span>

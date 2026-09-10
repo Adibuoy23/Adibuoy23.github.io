@@ -25,7 +25,8 @@ grammatical properties can segment visual narratives similar to humans. Read mor
 *Upadhyayula & Cohn (2025), Cognitive Science.*
 [:material-file-document: Paper](https://doi.org/10.1111/cogs.70050) ·
 [:material-database: Data & code](https://osf.io/s2h5x/) ·
-[:material-youtube: Talk](https://www.youtube.com/watch?v=eEBSmQwxVmk)
+[:material-youtube: Talk](https://www.youtube.com/watch?v=eEBSmQwxVmk) ·
+[:material-post-outline: Blog post](../../blog/posts/grammar-without-words.md)
 
 ---
 
