@@ -94,7 +94,7 @@ tree?
 
 ## Where does a strip break?
 
-The first experiment reused a simple task from an earlier study by Neil and Ryan
+The first experiment reused a simple task from an earlier study by Neil and Patrick
 Bender.[^bender] Fifty-four comic readers at Tufts University were handed 120 wordless
 Peanuts strips, six panels each, and a pencil. For every strip they drew a line at the
 gap where the strip most naturally split in two and labeled it 1. Then they kept
