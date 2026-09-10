@@ -11,6 +11,8 @@
     psycholinguistics: "Psycholinguistics",
     "cognitive-aging": "Cognitive aging",
     "computational-modeling": "Computational modeling",
+    fmri: "fMRI",
+    "eye-tracking": "Eye tracking",
   };
 
   function init() {

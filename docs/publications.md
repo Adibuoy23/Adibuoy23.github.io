@@ -16,6 +16,8 @@
   <button class="pub-chip" data-theme="psycholinguistics">Psycholinguistics</button>
   <button class="pub-chip" data-theme="cognitive-aging">Cognitive aging</button>
   <button class="pub-chip" data-theme="computational-modeling">Computational modeling</button>
+  <button class="pub-chip" data-theme="fmri">fMRI</button>
+  <button class="pub-chip" data-theme="eye-tracking">Eye tracking</button>
 </div>
 
 <p class="pub-count" aria-live="polite"></p>
@@ -51,7 +53,7 @@ Psychophysics*.
 [:material-newspaper-variant-outline: Press](https://featuredcontent.psychonomic.org/now-you-dont-see-me-and-now-you-still-dont-see-me-detecting-movie-skips-using-a-flicker-paradigm/)
 </div>
 
-<div class="pub" data-themes="perception attention" markdown="1">
+<div class="pub" data-themes="perception attention eye-tracking" markdown="1">
 **Upadhyayula, A.**, & Henderson, J. M. (2023). Spatiotemporal jump detections during
 continuous film viewing. *Journal of Vision*.
 [:material-file-document: PDF](files/papers/Spatiotemporal_saccade_paper.pdf) ·
@@ -66,7 +68,7 @@ into visual perception. *Journal of Experimental Psychology: General*.
 [:material-youtube: Talk](https://www.youtube.com/watch?v=JQlGu8vNaOw)
 </div>
 
-<div class="pub" data-themes="attention perception computational-modeling" markdown="1">
+<div class="pub" data-themes="attention perception computational-modeling eye-tracking" markdown="1">
 **Upadhyayula, A.**, & Flombaum, J. I. (2020). A model that adopts human fixations explains
 individual differences in multiple object tracking. *Cognition*.
 [:material-file-document: PDF](files/papers/MOT_paper.pdf) ·
@@ -79,7 +81,7 @@ individual differences in multiple object tracking. *Cognition*.
 
 ## Under review and in revision
 
-<div class="pub" data-themes="event-cognition memory narrative" markdown="1">
+<div class="pub" data-themes="event-cognition memory narrative fmri" markdown="1">
 **Upadhyayula, A.**, Henderson, J. M., Zacks, J. M.\*, & Reagh, Z. M.\* (under revision).
 Meaningful moments during film viewing are represented and remembered similarly across
 participants.
@@ -111,13 +113,13 @@ boundaries in film comprehension and memory.
 
 ## In preparation
 
-<div class="pub" data-themes="perception attention psycholinguistics computational-modeling" markdown="1">
+<div class="pub" data-themes="perception attention psycholinguistics computational-modeling eye-tracking" markdown="1">
 <u>Su, S. (X.)</u>, **Upadhyayula, A.**, & Zacks, J. M. (in preparation). Semantic information
 shapes gaze patterns during naturalistic movie viewing: Evidence from computational models of
 vision and language.
 </div>
 
-<div class="pub" data-themes="cognitive-aging event-cognition memory narrative" markdown="1">
+<div class="pub" data-themes="cognitive-aging event-cognition memory narrative fmri" markdown="1">
 **Upadhyayula, A.**\*, Bailey, H.\*, <u>Su, S. (X.)</u>, Flores, S., Reagh, Z. M., & Zacks,
 J. M. (in preparation). Behavioral and neural correlates of situation model updating in the
 aging brain.
