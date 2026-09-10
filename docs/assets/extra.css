@@ -204,16 +204,16 @@
 
 /* Selected: solid fill, white text. */
 .pub-chip.is-active {
-  background: var(--pub-c);
-  border-color: var(--pub-c);
+  background: var(--pub-c, var(--md-accent-fg-color));
+  border-color: var(--pub-c, var(--md-accent-fg-color));
   color: #fff;
 }
 [data-md-color-scheme="slate"] .pub-chip.is-active { color: #1b1b1f; }
 
 .pub-tag.is-active {
-  background: color-mix(in srgb, var(--pub-c) 22%, transparent);
-  border-color: var(--pub-c);
-  color: var(--pub-c);
+  background: color-mix(in srgb, var(--pub-c, var(--md-accent-fg-color)) 22%, transparent);
+  border-color: var(--pub-c, var(--md-accent-fg-color));
+  color: var(--pub-c, var(--md-accent-fg-color));
   font-weight: 700;
 }
 
