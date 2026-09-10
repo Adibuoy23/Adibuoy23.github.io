@@ -31,13 +31,14 @@ theme:
     - content.code.copy
     - announce.dismiss
 
+# The ?v= stamp defeats browser caching; bump it whenever these files change.
 extra_css:
-  - assets/extra.css
+  - assets/extra.css?v=20260909b
 
 extra_javascript:
-  - assets/publications.js
-  - assets/collapsible.js
-  - assets/video.js
+  - assets/publications.js?v=20260909b
+  - assets/collapsible.js?v=20260909b
+  - assets/video.js?v=20260909b
 
 markdown_extensions:
   - abbr
