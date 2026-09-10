@@ -15,6 +15,7 @@
   <button class="pub-chip" data-theme="narrative">Narrative comprehension</button>
   <button class="pub-chip" data-theme="psycholinguistics">Psycholinguistics</button>
   <button class="pub-chip" data-theme="cognitive-aging">Cognitive aging</button>
+  <button class="pub-chip" data-theme="computational-modeling">Computational modeling</button>
 </div>
 
 <p class="pub-count" aria-live="polite"></p>
@@ -25,7 +26,7 @@
 
 ## Peer-reviewed
 
-<div class="pub" data-themes="event-cognition narrative psycholinguistics" markdown="1">
+<div class="pub" data-themes="event-cognition narrative psycholinguistics computational-modeling" markdown="1">
 **Upadhyayula, A.**, & Cohn, N. (2025). A computational framework to study hierarchical
 processing in visual narratives. *Cognitive Science*, 49(5), e70050.
 [:material-file-document: Paper](https://doi.org/10.1111/cogs.70050) ·
@@ -65,7 +66,7 @@ into visual perception. *Journal of Experimental Psychology: General*.
 [:material-youtube: Talk](https://www.youtube.com/watch?v=JQlGu8vNaOw)
 </div>
 
-<div class="pub" data-themes="attention perception" markdown="1">
+<div class="pub" data-themes="attention perception computational-modeling" markdown="1">
 **Upadhyayula, A.**, & Flombaum, J. I. (2020). A model that adopts human fixations explains
 individual differences in multiple object tracking. *Cognition*.
 [:material-file-document: PDF](files/papers/MOT_paper.pdf) ·
@@ -88,7 +89,7 @@ participants.
 [:material-chart-box-outline: Key Moments visualization tool (access on request)](https://adibuoy23.github.io/storyboard-visualization/)
 </div>
 
-<div class="pub" data-themes="event-cognition narrative psycholinguistics memory" markdown="1">
+<div class="pub" data-themes="event-cognition narrative psycholinguistics memory computational-modeling" markdown="1">
 <u>Kim, J.</u>\*, **Upadhyayula, A.**\*, <u>Koh, J.</u>, Zacks, J. M., Reagh, Z. M.\*, &
 Barnett, A.\* (under revision). Key moments scaffold the semantic structure of narratives.
 [:material-file-document: Preprint](https://osf.io/preprints/psyarxiv/dcfvw_v1) ·
@@ -110,7 +111,7 @@ boundaries in film comprehension and memory.
 
 ## In preparation
 
-<div class="pub" data-themes="perception attention psycholinguistics" markdown="1">
+<div class="pub" data-themes="perception attention psycholinguistics computational-modeling" markdown="1">
 <u>Su, S. (X.)</u>, **Upadhyayula, A.**, & Zacks, J. M. (in preparation). Semantic information
 shapes gaze patterns during naturalistic movie viewing: Evidence from computational models of
 vision and language.

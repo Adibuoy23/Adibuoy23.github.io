@@ -10,6 +10,7 @@
     narrative: "Narrative comprehension",
     psycholinguistics: "Psycholinguistics",
     "cognitive-aging": "Cognitive aging",
+    "computational-modeling": "Computational modeling",
   };
 
   function init() {

@@ -157,6 +157,7 @@
 .pub-chip[data-theme="narrative"],        .pub-tag[data-theme="narrative"]        { --pub-c: #b3175a; }
 .pub-chip[data-theme="psycholinguistics"],.pub-tag[data-theme="psycholinguistics"]{ --pub-c: #43801f; }
 .pub-chip[data-theme="cognitive-aging"],  .pub-tag[data-theme="cognitive-aging"]  { --pub-c: #9c3b6b; }
+.pub-chip[data-theme="computational-modeling"], .pub-tag[data-theme="computational-modeling"] { --pub-c: #4d5b6a; }
 .pub-chip[data-theme="all"]               { --pub-c: var(--md-default-fg-color--light); }
 
 [data-md-color-scheme="slate"] {
@@ -167,6 +168,7 @@
   --pub-narrative: #f07ba6;
   --pub-psycholx: #9cce70;
   --pub-aging: #e79ac0;
+  --pub-modeling: #a9b7c6;
 }
 [data-md-color-scheme="slate"] .pub-chip[data-theme="perception"],
 [data-md-color-scheme="slate"] .pub-tag[data-theme="perception"]        { --pub-c: var(--pub-perception); }
@@ -182,6 +184,8 @@
 [data-md-color-scheme="slate"] .pub-tag[data-theme="psycholinguistics"] { --pub-c: var(--pub-psycholx); }
 [data-md-color-scheme="slate"] .pub-chip[data-theme="cognitive-aging"],
 [data-md-color-scheme="slate"] .pub-tag[data-theme="cognitive-aging"]   { --pub-c: var(--pub-aging); }
+[data-md-color-scheme="slate"] .pub-chip[data-theme="computational-modeling"],
+[data-md-color-scheme="slate"] .pub-tag[data-theme="computational-modeling"] { --pub-c: var(--pub-modeling); }
 
 /* Resting state: colored text on a faint tint of the same hue. */
 .pub-chip,
