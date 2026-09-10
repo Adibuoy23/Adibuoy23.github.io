@@ -271,7 +271,14 @@ a theory of how people read, and each model has shortcomings that the task was t
 to expose. An n-gram model only ever looks back one or two panels. It has no way to
 represent a connection between the first panel of a strip and the fifth, so in a longer
 narrative, where the payoff of a set-up may arrive many panels later, it has nothing to
-say. The Markov model can carry more, but it is still a chain: each panel is predicted
+say. It has a deeper problem too. Theories of visual narrative comprehension hold that
+the grammar and the meaning are processed side by side, as two parallel streams, and
+there is brain-recording evidence for that separation. Modeling the two in parallel means
+tracking how one role leads to the next and, at the same time, how each role tends to go
+with particular changes in meaning. An n-gram can count one of those or the other, never
+both at once. That is why we treated the n-grams as a baseline rather than a candidate
+theory, and why the discussion in the paper rests on the parser and the Markov model,
+which can hold both streams. The Markov model can carry more, but it is still a chain: each panel is predicted
 from the previous state alone, and a relationship that skips over intervening panels has
 to be smuggled in through the states. Intuitively, the tree looks like the
 structure built for the job. It represents a long-distance dependency directly, as one
