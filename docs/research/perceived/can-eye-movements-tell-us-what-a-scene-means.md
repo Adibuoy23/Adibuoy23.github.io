@@ -5,7 +5,10 @@ from semantics alone. Ongoing work with Sophie Su uses **CLIP embeddings** toget
 fixation maps to characterize the semantic content of a film as it unfolds, and to ask how
 much of viewers' gaze it explains.
 
-*Su, Upadhyayula & Zacks (in preparation).*
+*Su, Upadhyayula & Zacks (under review).*
+[:material-file-document: Preprint](https://osf.io/preprints/psyarxiv/2wmyb_v3) ·
+[:material-github: Code](https://github.com/sophiexingsu/CLIP_gaze) ·
+[:material-database: Eye-tracking data](https://osf.io/vsbaq/)
 
 ---
 

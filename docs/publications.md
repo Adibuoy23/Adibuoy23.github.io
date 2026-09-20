@@ -107,17 +107,20 @@ boundaries in film comprehension and memory.
 [:material-chart-box-outline: Key Moments visualization tool (access on request)](https://adibuoy23.github.io/storyboard-visualization/)
 </div>
 
+<div class="pub" data-themes="perception attention psycholinguistics computational-modeling eye-tracking" markdown="1">
+<u>Su, S. (X.)</u>, **Upadhyayula, A.**, & Zacks, J. M. (under review). Semantic information
+shapes gaze patterns during naturalistic movie viewing: Evidence from computational models of
+vision and language.
+[:material-file-document: Preprint](https://osf.io/preprints/psyarxiv/2wmyb_v3) ·
+[:material-github: Code](https://github.com/sophiexingsu/CLIP_gaze) ·
+[:material-database: Eye-tracking data](https://osf.io/vsbaq/)
+</div>
+
 </section>
 
 <section class="pub-group" markdown="1">
 
 ## In preparation
-
-<div class="pub" data-themes="perception attention psycholinguistics computational-modeling eye-tracking" markdown="1">
-<u>Su, S. (X.)</u>, **Upadhyayula, A.**, & Zacks, J. M. (in preparation). Semantic information
-shapes gaze patterns during naturalistic movie viewing: Evidence from computational models of
-vision and language.
-</div>
 
 <div class="pub" data-themes="cognitive-aging event-cognition memory narrative fmri" markdown="1">
 **Upadhyayula, A.**\*, Bailey, H.\*, <u>Su, S. (X.)</u>, Flores, S., Reagh, Z. M., & Zacks,
