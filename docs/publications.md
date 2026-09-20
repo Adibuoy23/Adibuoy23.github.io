@@ -129,6 +129,11 @@ aging brain.
 [:material-chart-line: Interactive results](https://adibuoy23.github.io/situation_model_updating/results/)
 </div>
 
+<div class="pub" data-themes="event-cognition memory narrative" markdown="1">
+**Upadhyayula, A.**, Tang, R., & Reagh, Z. M. (in preparation). Cueing with key moments
+improves narrative recall.
+</div>
+
 </section>
 
 <p class="pub-empty" hidden>No publications match that theme yet.</p>
