@@ -18,6 +18,7 @@
   <button class="pub-chip" data-theme="computational-modeling">Computational modeling</button>
   <button class="pub-chip" data-theme="fmri">fMRI</button>
   <button class="pub-chip" data-theme="eye-tracking">Eye tracking</button>
+  <button class="pub-chip" data-theme="llm">Large language models</button>
 </div>
 
 <p class="pub-count" aria-live="polite"></p>
@@ -129,7 +130,7 @@ aging brain.
 [:material-chart-line: Interactive results](https://adibuoy23.github.io/situation_model_updating/results/)
 </div>
 
-<div class="pub" data-themes="event-cognition memory narrative" markdown="1">
+<div class="pub" data-themes="event-cognition memory narrative computational-modeling llm" markdown="1">
 **Upadhyayula, A.**, Tang, R., & Reagh, Z. M. (in preparation). Cueing with key moments
 improves narrative recall.
 </div>

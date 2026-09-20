@@ -33,12 +33,12 @@ theme:
 
 # The ?v= stamp defeats browser caching; bump it whenever these files change.
 extra_css:
-  - assets/extra.css?v=20260909c
+  - assets/extra.css?v=20260920a
 
 extra_javascript:
-  - assets/publications.js?v=20260909c
-  - assets/collapsible.js?v=20260909c
-  - assets/video.js?v=20260909c
+  - assets/publications.js?v=20260920a
+  - assets/collapsible.js?v=20260920a
+  - assets/video.js?v=20260920a
 
 markdown_extensions:
   - abbr

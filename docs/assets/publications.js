@@ -13,6 +13,7 @@
     "computational-modeling": "Computational modeling",
     fmri: "fMRI",
     "eye-tracking": "Eye tracking",
+    llm: "Large language models",
   };
 
   function init() {
